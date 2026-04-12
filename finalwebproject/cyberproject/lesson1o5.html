@@ -3,104 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Lesson 2 Quiz - Phishing‑as‑a‑Service</title>
+
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #ffffff;
-        }
+        html, body { height: 100%; margin: 0; font-family: Arial, Helvetica, sans-serif; color: #fff; }
 
-        /* Background image */
+        /* Background image with blur + dark overlay */
         body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("slide 2.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            filter: blur(5px) brightness(0.7);
-            transform: scale(1.1);
-            z-index: -1;
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: url("slide 2.png") center/cover no-repeat;
+            filter: blur(5px) brightness(0.7); transform: scale(1.1); z-index: -1;
         }
 
         /* Main container */
         .container {
-            max-width: 900px;
-            margin: 70px auto;
-            padding: 40px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 12px;
-            box-shadow: 0 0 25px rgba(0,0,0,0.6);
-            text-align: center;
+            max-width: 900px; margin: 70px auto; padding: 40px;
+            background: rgba(0,0,0,0.7); border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.6); text-align: center;
         }
 
         /* Logo */
-        .logo {
-            display: block;
-            margin: 0 auto 25px auto;
-            width: 60px;
-        }
+        .logo { display: block; margin: 0 auto 25px; width: 60px; }
 
-        h1 {
-            text-align: center;
-            font-size: 2.4em;
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            color: #00d4ff;
-            font-weight: bold;
-        }
+        /* Headings */
+        h1 { text-align: center; font-size: 2.4em; margin-bottom: 10px; }
+        .highlight { color: #00d4ff; font-weight: bold; }
 
         /* Quiz styling */
-        .quiz-question {
-            margin: 20px 0;
-            text-align: left;
-        }
-
-        .quiz-options label {
-            display: block;
-            margin-bottom: 8px;
-        }
+        .quiz-question { margin: 20px 0; text-align: left; }
+        .quiz-options label { display: block; margin-bottom: 8px; }
 
         /* Buttons */
         .btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 30px;
-            font-size: 1.1em;
-            background: #00d4ff;
-            color: #000;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            display: inline-block; margin-top: 25px; padding: 12px 30px;
+            font-size: 1.1em; background: #00d4ff; color: #000;
+            border-radius: 30px; text-decoration: none; font-weight: bold;
+            cursor: pointer; transition: all 0.3s ease;
         }
-
-        .btn:hover {
-            background: #00aacc;
-            transform: scale(1.05);
-            box-shadow: 0 0 18px rgba(0, 212, 255, 0.7);
-        }
+        .btn:hover { background: #00aacc; transform: scale(1.05); box-shadow: 0 0 18px rgba(0,212,255,0.7); }
 
         /* Thank You Animation */
         #thankyou {
-            display: none;
-            font-size: 26px;
-            font-weight: bold;
-            color: #00d4ff;
-            animation: fadeInScale 2s ease forwards;
-            margin-top: 30px;
+            display: none; font-size: 26px; font-weight: bold; color: #00d4ff;
+            animation: fadeInScale 2s ease forwards; margin-top: 30px;
         }
-
         @keyframes fadeInScale {
             0% { opacity: 0; transform: scale(0.5); }
             50% { opacity: 1; transform: scale(1.2); }
@@ -108,124 +56,108 @@
         }
 
         /* Lesson viewer styling */
-        #lesson-list {
-            margin-top: 40px;
-            text-align: left;
-        }
-        #lesson-list h2 {
-            color: #7d47ff;
-            margin-bottom: 15px;
-        }
-        .lesson {
-            background: rgba(20,20,40,0.85);
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 12px;
-        }
+        #lesson-list { margin-top: 40px; text-align: left; }
+        #lesson-list h2 { color: #7d47ff; margin-bottom: 15px; }
+        .lesson { background: rgba(20,20,40,0.85); padding: 15px; margin: 15px 0; border-radius: 12px; }
         .lesson h3 { color: #35c6ff; margin-bottom: 8px; }
         .lesson p { color: #e0e0ff; }
         .lesson small { color: #a78bff; }
     </style>
 </head>
 <body>
+    <div class="container">
+        <!-- Logo -->
+        <img src="logo.jpeg" class="logo" alt="Organization Logo">
 
-<div class="container">
+        <!-- Quiz Title -->
+        <h1><i class="fas fa-question-circle"></i> Quiz: Phishing‑as‑a‑Service (PhaaS)</h1>
+        <p class="highlight">Test your knowledge from Lesson 2</p>
 
-    <!-- Logo -->
-    <img src="logo.jpeg" class="logo" alt="Organization Logo">
-
-    <!-- Quiz Title -->
-    <h1><i class="fas fa-question-circle"></i> Quiz: Phishing‑as‑a‑Service (PhaaS)</h1>
-    <p class="highlight">Test your knowledge from Lesson 2</p>
-
-    <!-- Quiz Questions -->
-    <div id="quizQuestions">
-        <div class="quiz-question">
-            <h3>1. What does Phishing‑as‑a‑Service (PhaaS) provide?</h3>
-            <div class="quiz-options">
-                <label><input type="radio" name="q1"> Ready‑made phishing tools and infrastructure</label>
-                <label><input type="radio" name="q1"> Free antivirus software</label>
-                <label><input type="radio" name="q1"> Secure cloud storage</label>
-                <label><input type="radio" name="q1"> Government‑approved security tools</label>
+        <!-- Quiz Questions -->
+        <div id="quizQuestions">
+            <div class="quiz-question">
+                <h3>1. What does Phishing‑as‑a‑Service (PhaaS) provide?</h3>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q1"> Ready‑made phishing tools and infrastructure</label>
+                    <label><input type="radio" name="q1"> Free antivirus software</label>
+                    <label><input type="radio" name="q1"> Secure cloud storage</label>
+                    <label><input type="radio" name="q1"> Government‑approved security tools</label>
+                </div>
             </div>
+
+            <div class="quiz-question">
+                <h3>2. Why is PhaaS considered dangerous?</h3>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q2"> It lowers the barrier to entry for cybercrime</label>
+                    <label><input type="radio" name="q2"> It protects users from phishing</label>
+                    <label><input type="radio" name="q2"> It only targets large corporations</label>
+                    <label><input type="radio" name="q2"> It is used by law enforcement</label>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>3. Which of the following is a feature of PhaaS?</h3>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q3"> Automated setup and deployment</label>
+                    <label><input type="radio" name="q3"> Free email accounts</label>
+                    <label><input type="radio" name="q3"> Built‑in antivirus protection</label>
+                    <label><input type="radio" name="q3"> Government monitoring tools</label>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>4. How do attackers typically use PhaaS?</h3>
+                <div class="quiz-options">
+                    <label><input type="radio" name="q4"> By subscribing to phishing services and targeting victims</label>
+                    <label><input type="radio" name="q4"> By reporting phishing to authorities</label>
+                    <label><input type="radio" name="q4"> By creating secure login systems</label>
+                    <label><input type="radio" name="q4"> By teaching cybersecurity awareness</label>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button class="btn" onclick="showThankYou()">I'm Done</button>
         </div>
 
-        <div class="quiz-question">
-            <h3>2. Why is PhaaS considered dangerous?</h3>
-            <div class="quiz-options">
-                <label><input type="radio" name="q2"> It lowers the barrier to entry for cybercrime</label>
-                <label><input type="radio" name="q2"> It protects users from phishing</label>
-                <label><input type="radio" name="q2"> It only targets large corporations</label>
-                <label><input type="radio" name="q2"> It is used by law enforcement</label>
-            </div>
-        </div>
+        <!-- Thank You Message -->
+        <div id="thankyou">🎉 Thanks for participating in our lesson! 🎉</div>
 
-        <div class="quiz-question">
-            <h3>3. Which of the following is a feature of PhaaS?</h3>
-            <div class="quiz-options">
-                <label><input type="radio" name="q3"> Automated setup and deployment</label>
-                <label><input type="radio" name="q3"> Free email accounts</label>
-                <label><input type="radio" name="q3"> Built‑in antivirus protection</label>
-                <label><input type="radio" name="q3"> Government monitoring tools</label>
-            </div>
-        </div>
-
-        <div class="quiz-question">
-            <h3>4. How do attackers typically use PhaaS?</h3>
-            <div class="quiz-options">
-                <label><input type="radio" name="q4"> By subscribing to phishing services and targeting victims</label>
-                <label><input type="radio" name="q4"> By reporting phishing to authorities</label>
-                <label><input type="radio" name="q4"> By creating secure login systems</label>
-                <label><input type="radio" name="q4"> By teaching cybersecurity awareness</label>
-            </div>
-        </div>
-
-        <button class="btn" onclick="showThankYou()">I'm Done</button>
+        <!-- Uploaded Lessons Section -->
+        <div id="lesson-list"></div>
     </div>
 
-    <!-- Thank You Message -->
-    <div id="thankyou">🎉 Thanks for participating in our lesson! 🎉</div>
-
-    <!-- Uploaded Lessons Section -->
-    <div id="lesson-list"></div>
-
-</div>
-
-<script>
-    function showThankYou() {
-        // Hide quiz questions
-        document.getElementById("quizQuestions").style.display = "none";
-        // Show thank you message
-        document.getElementById("thankyou").style.display = "block";
-        // Redirect after 3 seconds
-        setTimeout(function() {
-            window.location.href = "homepage.html";
-        }, 3000);
-    }
-
-    // Lesson viewer script
-    let lessons = JSON.parse(localStorage.getItem("cs_lessons")) || [];
-
-    function renderLessons() {
-        const container = document.getElementById("lesson-list");
-        container.innerHTML = "<h2>Uploaded Lessons</h2>";
-        if (lessons.length === 0) {
-            container.innerHTML += "<p>No lessons uploaded yet.</p>";
-            return;
+    <script>
+        function showThankYou() {
+            // Hide quiz questions
+            document.getElementById("quizQuestions").style.display = "none";
+            // Show thank you message
+            document.getElementById("thankyou").style.display = "block";
+            // Redirect after 3 seconds
+            setTimeout(function() { window.location.href = "homepage.html"; }, 3000);
         }
-        lessons.forEach(l => {
-            const div = document.createElement("div");
-            div.className = "lesson";
-            div.innerHTML = `
-                <h3>${l.title}</h3>
-                <p>${l.content}</p>
-                <small>Uploaded at: ${l.createdAt}</small>
-            `;
-            container.appendChild(div);
-        });
-    }
-    renderLessons();
-</script>
 
+        // Lesson viewer script
+        let lessons = JSON.parse(localStorage.getItem("cs_lessons")) || [];
+
+        function renderLessons() {
+            const container = document.getElementById("lesson-list");
+            container.innerHTML = "<h2>Uploaded Lessons</h2>";
+            if (lessons.length === 0) {
+                container.innerHTML += "<p>No lessons uploaded yet.</p>";
+                return;
+            }
+            lessons.forEach(l => {
+                const div = document.createElement("div");
+                div.className = "lesson";
+                div.innerHTML = `
+                    <h3>${l.title}</h3>
+                    <p>${l.content}</p>
+                    <small>Uploaded at: ${l.createdAt}</small>
+                `;
+                container.appendChild(div);
+            });
+        }
+        renderLessons();
+    </script>
 </body>
 </html>
