@@ -4,168 +4,99 @@
     <meta charset="UTF-8">
     <title>Cybersecurity Fundamentals</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #f2f2f2;
-        }
+        html, body { height: 100%; margin: 0; font-family: Arial, Helvetica, sans-serif; color: #f2f2f2; }
 
+        /* Background image with blur + dark overlay */
         body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background: url("slide 1.png") center / cover no-repeat;
-            filter: blur(5px) brightness(0.7);
-            transform: scale(1.1);
-            z-index: -1;
+            content: ""; position: fixed; inset: 0;
+            background: url("slide 1.png") center/cover no-repeat;
+            filter: blur(5px) brightness(0.7); transform: scale(1.1); z-index: -1;
         }
 
-        .lesson {
-            max-width: 900px;
-            margin: 40px auto;
-            background: rgba(0,0,0,0.65);
-            padding: 30px;
-            border-radius: 12px;
-        }
+        /* Lesson container */
+        .lesson { max-width: 900px; margin: 40px auto; background: rgba(0,0,0,0.65); padding: 30px; border-radius: 12px; }
 
-        .logo {
-            display: block;
-            width: 50px;
-            margin: 0 auto 15px;
-        }
+        /* Logo */
+        .logo { display: block; width: 50px; margin: 0 auto 15px; }
 
-        h1, h2 {
-            color: #4da6ff;
-        }
+        /* Headings */
+        h1, h2 { color: #4da6ff; }
+        h1 { text-align: center; }
+        p { line-height: 1.8; }
 
-        h1 {
-            text-align: center;
-        }
+        /* Icon styling */
+        .icon { color: #4da6ff; margin-right: 10px; }
 
-        p {
-            line-height: 1.8;
-        }
-
-        .icon {
-            color: #4da6ff;
-            margin-right: 10px;
-        }
-
+        /* Highlighted info boxes */
         .box {
-            background: rgba(77,166,255,0.12);
-            border-left: 4px solid #4da6ff;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 6px;
+            background: rgba(77,166,255,0.12); border-left: 4px solid #4da6ff;
+            padding: 15px; margin: 20px 0; border-radius: 6px;
         }
 
-        ul {
-            margin-left: 20px;
-        }
+        ul { margin-left: 20px; }
 
-        /* ✅ BUTTON */
-        .btn-container {
-            text-align: center;
-            margin-top: 40px;
-        }
-
+        /* Lesson navigation button */
+        .btn-container { text-align: center; margin-top: 40px; }
         .lesson-btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #4da6ff;
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 30px;
-            transition: 0.3s;
+            display: inline-block; padding: 12px 30px; background: #4da6ff; color: #000;
+            text-decoration: none; font-weight: bold; border-radius: 30px; transition: 0.3s;
         }
-
-        .lesson-btn:hover {
-            background: #3399ff;
-            color: white;
-        }
+        .lesson-btn:hover { background: #3399ff; color: #fff; }
     </style>
 </head>
 
 <body>
+    <div class="lesson">
+        <!-- Logo -->
+        <img src="logo.jpeg" class="logo" alt="Organization Logo">
 
-<div class="lesson">
+        <!-- Main Title -->
+        <h1><i class="fa-solid fa-shield-halved icon"></i> Cybersecurity Threats & Investigations</h1>
 
-    <!-- Logo -->
-    <img src="logo.jpeg" class="logo" alt="Organization Logo">
+        <!-- Intro -->
+        <p>This lesson explains fundamental concepts behind modern cybercrime, focusing on how attacks operate, why cryptocurrency is used, and how cybersecurity professionals investigate malicious activity.</p>
 
-    <h1>
-        <i class="fa-solid fa-shield-halved icon"></i>
-        Cybersecurity Threats & Investigations
-    </h1>
+        <!-- Section: Threat Landscape -->
+        <h2><i class="fa-solid fa-triangle-exclamation icon"></i> Understanding the Cyber Threat Landscape</h2>
+        <div class="box">
+            <ul>
+                <li><i class="fa-solid fa-virus icon"></i>Malware</li>
+                <li><i class="fa-solid fa-envelope-open-text icon"></i>Phishing</li>
+                <li><i class="fa-solid fa-network-wired icon"></i>Network intrusions</li>
+                <li><i class="fa-solid fa-user-ninja icon"></i>Credential theft</li>
+            </ul>
+        </div>
 
-    <p>
-        This lesson explains fundamental concepts behind modern cybercrime,
-        focusing on how attacks operate, why cryptocurrency is used, and how
-        cybersecurity professionals investigate malicious activity.
-    </p>
+        <!-- Section: Cryptocurrency -->
+        <h2><i class="fa-brands fa-bitcoin icon"></i> Cryptocurrency in Cybercrime</h2>
+        <div class="box">
+            <ul>
+                <li><i class="fa-solid fa-user-secret icon"></i>Pseudonymous wallets</li>
+                <li><i class="fa-solid fa-globe icon"></i>Global payments</li>
+                <li><i class="fa-solid fa-layer-group icon"></i>Mixers</li>
+            </ul>
+        </div>
 
-    <h2>
-        <i class="fa-solid fa-triangle-exclamation icon"></i>
-        Understanding the Cyber Threat Landscape
-    </h2>
+        <!-- Section: Investigation -->
+        <h2><i class="fa-solid fa-magnifying-glass icon"></i> Investigation Techniques</h2>
+        <div class="box">
+            <ul>
+                <li><i class="fa-solid fa-code icon"></i>Reverse engineering</li>
+                <li><i class="fa-solid fa-server icon"></i>Traffic analysis</li>
+                <li><i class="fa-solid fa-wallet icon"></i>Blockchain tracing</li>
+            </ul>
+        </div>
 
-    <div class="box">
-        <ul>
-            <li><i class="fa-solid fa-virus icon"></i>Malware</li>
-            <li><i class="fa-solid fa-envelope-open-text icon"></i>Phishing</li>
-            <li><i class="fa-solid fa-network-wired icon"></i>Network intrusions</li>
-            <li><i class="fa-solid fa-user-ninja icon"></i>Credential theft</li>
-        </ul>
+        <!-- Section: Takeaway -->
+        <h2><i class="fa-solid fa-lightbulb icon"></i> Core Takeaway</h2>
+        <p>Cybercrime relies on anonymity and speed—but investigations and defenses reduce impact.</p>
+
+        <!-- Next Lesson Button -->
+        <div class="btn-container"><a href="lesson1o4.html" class="lesson-btn">Next Lesson →</a></div>
     </div>
-
-    <h2>
-        <i class="fa-brands fa-bitcoin icon"></i>
-        Cryptocurrency in Cybercrime
-    </h2>
-
-    <div class="box">
-        <ul>
-            <li><i class="fa-solid fa-user-secret icon"></i>Pseudonymous wallets</li>
-            <li><i class="fa-solid fa-globe icon"></i>Global payments</li>
-            <li><i class="fa-solid fa-layer-group icon"></i>Mixers</li>
-        </ul>
-    </div>
-
-    <h2>
-        <i class="fa-solid fa-magnifying-glass icon"></i>
-        Investigation Techniques
-    </h2>
-
-    <div class="box">
-        <ul>
-            <li><i class="fa-solid fa-code icon"></i>Reverse engineering</li>
-            <li><i class="fa-solid fa-server icon"></i>Traffic analysis</li>
-            <li><i class="fa-solid fa-wallet icon"></i>Blockchain tracing</li>
-        </ul>
-    </div>
-
-    <h2>
-        <i class="fa-solid fa-lightbulb icon"></i>
-        Core Takeaway
-    </h2>
-
-    <p>
-        Cybercrime relies on anonymity and speed—but investigations and defenses reduce impact.
-    </p>
-
-    <!-- ✅ BUTTON (INSIDE lesson, not excluded) -->
-    <div class="btn-container">
-        <a href="lesson1o4.html" class="lesson-btn">Next Lesson →</a>
-    </div>
-
-</div>
-
 </body>
 </html>
