@@ -8,245 +8,109 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+        html, body { height: 100%; margin: 0; font-family: Arial, Helvetica, sans-serif; }
 
-        /* Background image */
+        /* Background image with blur and dark overlay */
         body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("slide 1.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            filter: blur(5px) brightness(0.7);
-            transform: scale(1.1);
-            z-index: -1;
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: url("slide 1.png") no-repeat center/cover;
+            filter: blur(5px) brightness(0.7); transform: scale(1.1); z-index: -1;
         }
 
-        /* Main container */
+        /* Main content container */
         .content {
-            max-width: 950px;
-            margin: 40px auto;
-            padding: 35px;
-            background: rgba(0, 0, 0, 0.78);
-            color: #ffffff;
-            border-radius: 12px;
+            max-width: 950px; margin: 40px auto; padding: 35px;
+            background: rgba(0, 0, 0, 0.78); color: #fff; border-radius: 12px;
         }
 
-        /* Logo */
-        .logo {
-            display: block;
-            margin: 0 auto 20px auto;
-            width: 60px;
-        }
+        /* Logo styling */
+        .logo { display: block; margin: 0 auto 20px; width: 60px; }
 
         /* Headings */
-        h1, h2, h3 {
-            color: #1ea7ff;
-        }
+        h1, h2, h3 { color: #1ea7ff; }
+        h1 { text-align: center; margin-bottom: 30px; }
+        p { line-height: 1.6; }
 
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+        /* Divider line */
+        hr { border: none; border-top: 1px solid #1ea7ff; margin: 30px 0; }
 
-        p {
-            line-height: 1.6;
-        }
+        /* Icon + title heading */
+        .icon-title { display: flex; align-items: center; gap: 12px; }
+        .icon-title i { font-size: 1.8rem; color: #1ea7ff; }
 
-        hr {
-            border: none;
-            border-top: 1px solid #1ea7ff;
-            margin: 30px 0;
-        }
-
-        /* Icon headings */
-        .icon-title {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .icon-title i {
-            font-size: 1.8rem;
-            color: #1ea7ff;
-        }
-
-        /* Info boxes */
+        /* Highlighted info boxes */
         .info-box {
-            display: flex;
-            gap: 15px;
-            margin: 15px 0;
-            padding: 15px;
+            display: flex; gap: 15px; margin: 15px 0; padding: 15px;
             background: rgba(30, 167, 255, 0.15);
-            border-left: 4px solid #1ea7ff;
-            border-radius: 6px;
+            border-left: 4px solid #1ea7ff; border-radius: 6px;
         }
+        .info-box i { font-size: 1.6rem; color: #1ea7ff; margin-top: 4px; }
 
-        .info-box i {
-            font-size: 1.6rem;
-            color: #1ea7ff;
-            margin-top: 4px;
-        }
-
-        /* Square blue lesson button */
+        /* Lesson navigation button */
         .lesson-btn {
-            display: inline-block;
-            margin-top: 35px;
-            padding: 16px 32px;
-            background-color: #1ea7ff;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 10px; /* curved edges */
+            display: inline-block; margin-top: 35px; padding: 16px 32px;
+            background: #1ea7ff; color: #fff; text-decoration: none;
+            font-size: 1.1rem; font-weight: bold; border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
             transition: background-color 0.2s ease, transform 0.2s ease;
         }
+        .lesson-btn:hover { background: #158ad6; transform: translateY(-2px); }
+        .lesson-btn:active { background: #0f6fb3; transform: translateY(0); }
 
-        .lesson-btn:hover {
-            background-color: #158ad6;
-            transform: translateY(-2px);
-        }
-
-        .lesson-btn:active {
-            background-color: #0f6fb3;
-            transform: translateY(0);
-        }
-
-        footer {
-            margin-top: 45px;
-            text-align: center;
-            font-size: 0.9em;
-            color: #cccccc;
-        }
+        /* Footer */
+        footer { margin-top: 45px; text-align: center; font-size: 0.9em; color: #ccc; }
     </style>
 </head>
 
 <body>
+    <div class="content">
+        <!-- Logo -->
+        <img src="logo.jpeg" class="logo" alt="Organization Logo">
 
-<div class="content">
+        <!-- Main Title -->
+        <h1><i class="fas fa-shield-halved"></i> Modern Ransomware Explained</h1>
 
-    <!-- Logo -->
-    <img src="logo.jpeg" class="logo" alt="Organization Logo">
+        <!-- Intro paragraph -->
+        <p>
+            Modern ransomware attacks are highly organized cybercrimes. They rely on advanced tactics and teamwork to force victims into paying large sums of money. Two key ideas define how these attacks work: <strong>double extortion</strong> and <strong>organized cybercriminal groups</strong>.
+        </p>
 
-    <!-- Title -->
-    <h1>
-        <i class="fas fa-shield-halved"></i>
-        Modern Ransomware Explained
-    </h1>
+        <hr>
 
-    <p>
-        Modern ransomware attacks are highly organized cybercrimes.
-        They rely on advanced tactics and teamwork to force victims into paying large sums of money.
-        Two key ideas define how these attacks work:
-        <strong>double extortion</strong> and <strong>organized cybercriminal groups</strong>.
-    </p>
+        <!-- Section: Double Extortion -->
+        <h2 class="icon-title"><i class="fas fa-user-lock"></i> What Does “Double Extortion” Mean?</h2>
+        <p><strong>Double extortion</strong> is a ransomware technique where attackers demand payment in two different ways instead of one.</p>
 
-    <hr>
+        <div class="info-box"><i class="fas fa-lock"></i><p><strong>Step 1:</strong> Attackers encrypt the victim’s systems and files.</p></div>
+        <div class="info-box"><i class="fas fa-database"></i><p><strong>Step 2:</strong> Sensitive data is stolen before encryption.</p></div>
+        <div class="info-box"><i class="fas fa-money-bill-wave"></i><p>Victims are forced to pay twice to recover systems and protect data.</p></div>
 
-    <!-- Double Extortion -->
-    <h2 class="icon-title">
-        <i class="fas fa-user-lock"></i>
-        What Does “Double Extortion” Mean?
-    </h2>
+        <hr>
 
-    <p>
-        <strong>Double extortion</strong> is a ransomware technique where attackers demand
-        payment in two different ways instead of one.
-    </p>
+        <!-- Section: Organization -->
+        <h2 class="icon-title"><i class="fas fa-network-wired"></i> How Cybercriminal Groups Organize Themselves</h2>
+        <p>Ransomware groups operate like businesses using <strong>Ransomware-as-a-Service (RaaS)</strong>.</p>
 
-    <div class="info-box">
-        <i class="fas fa-lock"></i>
-        <p><strong>Step 1:</strong> Attackers encrypt the victim’s systems and files.</p>
+        <div class="info-box"><i class="fas fa-code"></i><p><strong>Developers:</strong> Create ransomware tools.</p></div>
+        <div class="info-box"><i class="fas fa-user-secret"></i><p><strong>Affiliates:</strong> Carry out attacks.</p></div>
+        <div class="info-box"><i class="fas fa-key"></i><p><strong>Access Brokers:</strong> Sell stolen credentials.</p></div>
+        <div class="info-box"><i class="fas fa-coins"></i><p><strong>Launderers:</strong> Obscure ransom payments.</p></div>
+
+        <hr>
+
+        <!-- Section: Key Takeaways -->
+        <h2 class="icon-title"><i class="fas fa-triangle-exclamation"></i> Key Takeaways</h2>
+        <div class="info-box"><i class="fas fa-check-circle"></i><p>Double extortion targets systems and sensitive data.</p></div>
+        <div class="info-box"><i class="fas fa-check-circle"></i><p>Ransomware groups function like businesses.</p></div>
+        <div class="info-box"><i class="fas fa-check-circle"></i><p>Cybercrime depends on teamwork and profit sharing.</p></div>
+
+        <!-- Next Lesson Button -->
+        <div style="text-align: center;">
+            <a href="lesson1o3.html" class="lesson-btn">Next Lesson →</a>
+        </div>
+
+        <!-- Footer -->
+        <footer>Cybersecurity Lesson • Digital Ethics • Ransomware Case Study</footer>
     </div>
-
-    <div class="info-box">
-        <i class="fas fa-database"></i>
-        <p><strong>Step 2:</strong> Sensitive data is stolen before encryption.</p>
-    </div>
-
-    <div class="info-box">
-        <i class="fas fa-money-bill-wave"></i>
-        <p>Victims are forced to pay twice to recover systems and protect data.</p>
-    </div>
-
-    <hr>
-
-    <!-- Organization -->
-    <h2 class="icon-title">
-        <i class="fas fa-network-wired"></i>
-        How Cybercriminal Groups Organize Themselves
-    </h2>
-
-    <p>
-        Ransomware groups operate like businesses using
-        <strong>Ransomware-as-a-Service (RaaS)</strong>.
-    </p>
-
-    <div class="info-box">
-        <i class="fas fa-code"></i>
-        <p><strong>Developers:</strong> Create ransomware tools.</p>
-    </div>
-
-    <div class="info-box">
-        <i class="fas fa-user-secret"></i>
-        <p><strong>Affiliates:</strong> Carry out attacks.</p>
-    </div>
-
-    <div class="info-box">
-        <i class="fas fa-key"></i>
-        <p><strong>Access Brokers:</strong> Sell stolen credentials.</p>
-    </div>
-
-    <div class="info-box">
-        <i class="fas fa-coins"></i>
-        <p><strong>Launderers:</strong> Obscure ransom payments.</p>
-    </div>
-
-    <hr>
-
-    <!-- Takeaways -->
-    <h2 class="icon-title">
-        <i class="fas fa-triangle-exclamation"></i>
-        Key Takeaways
-    </h2>
-
-    <div class="info-box">
-        <i class="fas fa-check-circle"></i>
-        <p>Double extortion targets systems and sensitive data.</p>
-    </div>
-
-    <div class="info-box">
-        <i class="fas fa-check-circle"></i>
-        <p>Ransomware groups function like businesses.</p>
-    </div>
-
-    <div class="info-box">
-        <i class="fas fa-check-circle"></i>
-        <p>Cybercrime depends on teamwork and profit sharing.</p>
-    </div>
-
-    <!-- Next Lesson Button -->
-    <div style="text-align: center;">
-        <a href="lesson1o3.html" class="lesson-btn">
-            Next Lesson →
-        </a>
-    </div>
-
-    <footer>
-        Cybersecurity Lesson • Digital Ethics • Ransomware Case Study
-    </footer>
-
-</div>
-
 </body>
 </html>
