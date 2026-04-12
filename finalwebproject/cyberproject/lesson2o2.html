@@ -1,201 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Lesson: Deceptive Phishing Links & Fake Login Pages</title>
-
-    <!-- ✅ Font Awesome Icons (WILL NOT APPEAR AS TEXT) -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #ffffff;
-        }
-
-        /* Background image */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("slide 2.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            filter: blur(5px) brightness(0.7);
-            transform: scale(1.1);
-            z-index: -1;
-        }
-
-        /* Content container */
-        .container {
-            max-width: 900px;
-            margin: 70px auto;
-            padding: 40px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 12px;
-            box-shadow: 0 0 25px rgba(0,0,0,0.6);
-        }
-
-        /* ✅ Centered logo */
-        .logo {
-            display: block;
-            margin: 0 auto 25px;
-            width: 70px;
-            height: auto;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 2.4em;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            margin-top: 30px;
-            color: #00d4ff;
-        }
-
-        h2 i {
-            margin-right: 10px;
-        }
-
-        p {
-            line-height: 1.7;
-            font-size: 1.05em;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-            line-height: 1.8;
-        }
-
-        ul li::before {
-            content: "\f111";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            color: #00d4ff;
-            margin-right: 10px;
-        }
-
-        .highlight {
-            color: #00d4ff;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        /* Next Button */
-        .next-btn {
-            display: block;
-            margin: 45px auto 0;
-            padding: 15px 45px;
-            font-size: 1.15em;
-            background: #00d4ff;
-            color: #000;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            width: fit-content;
-            transition: all 0.3s ease;
-        }
-
-        .next-btn i {
-            margin-left: 10px;
-        }
-
-        .next-btn:hover {
-            background: #00aacc;
-            transform: scale(1.05);
-            box-shadow: 0 0 18px rgba(0, 212, 255, 0.7);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Lesson: Deceptive Phishing Links & Fake Login Pages</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("slide 2.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      filter: blur(5px) brightness(0.7);
+      transform: scale(1.1);
+      z-index: -1;
+    }
+    .container {
+      max-width: 900px;
+      margin: 70px auto;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    }
+    .logo {
+      display: block;
+      margin: 0 auto 25px;
+      width: 70px;
+      height: auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.4em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin-top: 30px;
+      color: #00d4ff;
+    }
+    h2 i {
+      margin-right: 10px;
+    }
+    p {
+      line-height: 1.7;
+      font-size: 1.05em;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      line-height: 1.8;
+    }
+    ul li::before {
+      content: "\f111";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: #00d4ff;
+      margin-right: 10px;
+    }
+    .highlight {
+      color: #00d4ff;
+      font-weight: bold;
+      text-align: center;
+    }
+    .next-btn {
+      display: block;
+      margin: 45px auto 0;
+      padding: 15px 45px;
+      font-size: 1.15em;
+      background: #00d4ff;
+      color: #000;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      width: fit-content;
+      transition: all 0.3s ease;
+    }
+    .next-btn i {
+      margin-left: 10px;
+    }
+    .next-btn:hover {
+      background: #00aacc;
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(0, 212, 255, 0.7);
+    }
+  </style>
 </head>
-
 <body>
-
-<div class="container">
-
-    <!-- ✅ CENTERED LOGO -->
+  <div class="container">
     <img src="logo.jpeg" class="logo" alt="Organization Logo">
-
-    <!-- Lesson Title -->
-    <h1>
-        <i class="fas fa-link"></i>
-        Deceptive Phishing Links & Fake Login Pages
-    </h1>
-
-    <p class="highlight">
-        <i class="fas fa-user-shield"></i>
-        How Modern Phishing Tricks Victims into Trusting Attacks
-    </p>
-
-    <!-- Section 1 -->
-    <h2>
-        <i class="fas fa-mask"></i>
-        The Service Generates Deceptive Phishing Links
-    </h2>
-
-    <p>
-        Modern phishing‑as‑a‑service platforms do not rely on obvious or suspicious links.
-        Instead, they automatically generate <span class="highlight">deceptive URLs</span>
-        designed to visually resemble legitimate websites.
-    </p>
-
-    <p>
-        These links often include trusted brand names and may use URL tricks, shortened links,
-        or masked domains to appear safe at first glance.
-    </p>
-
+    <h1><i class="fas fa-link"></i> Deceptive Phishing Links & Fake Login Pages</h1>
+    <p class="highlight"><i class="fas fa-user-shield"></i> How Modern Phishing Tricks Victims into Trusting Attacks</p>
+    <h2><i class="fas fa-mask"></i> The Service Generates Deceptive Phishing Links</h2>
+    <p>Modern phishing‑as‑a‑service platforms do not rely on obvious or suspicious links. Instead, they automatically generate <span class="highlight">deceptive URLs</span> designed to visually resemble legitimate websites.</p>
+    <p>These links often include trusted brand names and may use URL tricks, shortened links, or masked domains to appear safe at first glance.</p>
     <ul>
-        <li>Trusted brand names appear at the beginning of the link</li>
-        <li>URL masking hides the real destination</li>
-        <li>Shortened links remove visible warning signs</li>
-        <li>Victims are rushed to click without careful inspection</li>
+      <li>Trusted brand names appear at the beginning of the link</li>
+      <li>URL masking hides the real destination</li>
+      <li>Shortened links remove visible warning signs</li>
+      <li>Victims are rushed to click without careful inspection</li>
     </ul>
-
-    <!-- Section 2 -->
-    <h2>
-        <i class="fas fa-window-restore"></i>
-        Victims Interact with Real or Cloned Login Pages
-    </h2>
-
-    <p>
-        After clicking a phishing link, victims are shown a login page that looks authentic.
-        In advanced attacks, the page may be the <span class="highlight">real website</span>
-        itself, accessed through attacker‑controlled infrastructure.
-    </p>
-
-    <p>
-        Because the page behaves normally, victims confidently enter credentials and MFA codes
-        while the attacker silently captures all data.
-    </p>
-
+    <h2><i class="fas fa-window-restore"></i> Victims Interact with Real or Cloned Login Pages</h2>
+    <p>After clicking a phishing link, victims are shown a login page that looks authentic. In advanced attacks, the page may be the <span class="highlight">real website</span> itself, accessed through attacker‑controlled infrastructure.</p>
+    <p>Because the page behaves normally, victims confidently enter credentials and MFA codes while the attacker silently captures all data.</p>
     <ul>
-        <li>Login pages perfectly match real branding</li>
-        <li>No visual signs of compromise</li>
-        <li>Credentials captured in real time</li>
-        <li>MFA codes intercepted during login</li>
+      <li>Login pages perfectly match real branding</li>
+      <li>No visual signs of compromise</li>
+      <li>Credentials captured in real time</li>
+      <li>MFA codes intercepted during login</li>
     </ul>
-
-    <!-- Warning Message -->
-    <p class="highlight" style="margin-top:30px;">
-        <i class="fas fa-triangle-exclamation"></i>
-        A page can look real and still be part of a phishing attack.
-    </p>
-
-    <!-- Next Lesson Button -->
-    <a href="lesson2o3.html" class="next-btn">
-        Next Lesson <i class="fas fa-arrow-right"></i>
-    </a>
-
-</div>
-
+    <p class="highlight" style="margin-top:30px;"><i class="fas fa-triangle-exclamation"></i> A page can look real and still be part of a phishing attack.</p>
+    <a href="lesson2o3.html" class="next-btn">Next Lesson <i class="fas fa-arrow-right"></i></a>
+  </div>
 </body>
 </html>
