@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8"><title>DDoS and Email Flooding Attacks</title>
 
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
+        /* General page setup */
         html, body {
             height: 100%; margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            color: #ffffff;
+            color: #fff;
         }
 
-        /* Background image with blur + dark overlay */
+        /* Background with blur + dim effect */
         body::before {
             content: ""; position: fixed; top: 0; left: 0;
             width: 100%; height: 100%;
@@ -23,45 +24,28 @@
             z-index: -1;
         }
 
-        .container {
-            max-width: 900px; margin: auto;
-            padding: 60px 30px;
-        }
+        /* Main content wrapper */
+        .container { max-width: 900px; margin: auto; padding: 60px 30px; }
+        .content-box { background: rgba(0,0,0,0.65); border-radius: 14px; padding: 40px; }
 
-        .content-box {
-            background: rgba(0, 0, 0, 0.65);
-            border-radius: 14px;
-            padding: 40px;
-        }
+        /* Logo styling */
+        .logo { display: block; margin: 0 auto 20px auto; width: 50px; }
 
-        /* ✅ Centered logo */
-        .logo {
-            display: block; margin: 0 auto 20px auto;
-            width: 50px;
-        }
-
+        /* Headings */
         h1, h2 { color: #00c3ff; }
-        h1 {
-            text-align: center; font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        h2 {
-            margin-top: 35px; font-size: 1.6rem;
-        }
+        h1 { text-align: center; font-size: 2.5rem; margin-bottom: 10px; }
+        h2 { margin-top: 35px; font-size: 1.6rem; }
 
-        p {
-            line-height: 1.7; font-size: 1.05rem;
-            margin-top: 10px;
-        }
-
+        /* Text */
+        p { line-height: 1.7; font-size: 1.05rem; margin-top: 10px; }
         ul { margin-top: 15px; padding-left: 20px; }
         li { margin-bottom: 10px; line-height: 1.6; }
 
+        /* Icons */
         .icon { margin-right: 10px; }
 
-        .next-lesson {
-            text-align: center; margin-top: 45px;
-        }
+        /* Next lesson button */
+        .next-lesson { text-align: center; margin-top: 45px; }
         .next-lesson a {
             background: #00c3ff; color: #000;
             text-decoration: none;
@@ -72,10 +56,7 @@
             transition: background 0.3s ease, transform 0.3s ease;
             display: inline-block;
         }
-        .next-lesson a:hover {
-            background: #5ad9ff;
-            transform: scale(1.05);
-        }
+        .next-lesson a:hover { background: #5ad9ff; transform: scale(1.05); }
     </style>
 </head>
 
@@ -83,23 +64,16 @@
 <div class="container">
     <div class="content-box">
 
-        <!-- ✅ Centered Logo -->
+        <!-- Logo at the top -->
         <img src="logo.jpeg" class="logo" alt="Organization Logo">
 
-        <!-- Page Title -->
+        <!-- Title -->
         <h1><i class="fa-solid fa-tower-broadcast icon"></i> DDoS &amp; Email Flooding Attacks</h1>
-        <p style="text-align: center; opacity: 0.9;">
-            Understanding how availability‑based attacks disrupt systems and communication
-        </p>
+        <p style="text-align:center; opacity:0.9;">Understanding how availability‑based attacks disrupt systems and communication</p>
 
         <!-- Section: DDoS -->
         <h2><i class="fa-solid fa-wifi icon"></i> Distributed Denial‑of‑Service (DDoS)</h2>
-        <p>
-            A distributed denial‑of‑service (DDoS) attack aims to make a service unavailable
-            by overwhelming it with traffic from many sources simultaneously. Botnets are
-            especially effective for DDoS because they generate traffic from thousands of
-            legitimate and geographically distributed devices.
-        </p>
+        <p>DDoS attacks aim to make a service unavailable by overwhelming it with traffic from many sources. Botnets are especially effective because they generate traffic from thousands of legitimate, geographically spread devices.</p>
         <ul>
             <li>Traffic floods overwhelm servers and network links</li>
             <li>Residential IP addresses make blocking difficult</li>
@@ -108,11 +82,7 @@
 
         <!-- Section: Email Flooding -->
         <h2><i class="fa-solid fa-envelope-open-text icon"></i> Email Flooding Attacks</h2>
-        <p>
-            Email flooding is a form of availability attack targeting inboxes rather than
-            web services. Attackers generate massive volumes of email to prevent victims
-            from accessing legitimate communication.
-        </p>
+        <p>Email flooding targets inboxes instead of web services. Attackers send massive volumes of email so victims struggle to access legitimate communication.</p>
         <ul>
             <li>Inbox saturation prevents normal use</li>
             <li>Important messages may be missed</li>
@@ -121,26 +91,15 @@
 
         <!-- Section: Automation -->
         <h2><i class="fa-solid fa-robot icon"></i> Role of Automation</h2>
-        <p>
-            Automation allows attackers to conduct both DDoS and email flooding at scale.
-            Once attack systems are configured, they can operate continuously with minimal
-            human interaction, greatly increasing impact.
-        </p>
+        <p>Automation lets attackers scale both DDoS and email flooding. Once systems are set up, they can run continuously with little human input, amplifying damage.</p>
 
         <!-- Section: Impact -->
         <h2><i class="fa-solid fa-triangle-exclamation icon"></i> Impact of These Attacks</h2>
-        <p>
-            Availability attacks affect more than systems. They can disrupt businesses,
-            research, emergency communication, and personal safety, making them a serious
-            cybersecurity concern even without data theft.
-        </p>
+        <p>Availability attacks disrupt more than systems. They can affect businesses, research, emergency communication, and personal safety — serious concerns even without data theft.</p>
 
         <!-- Section: Defense -->
         <h2><i class="fa-solid fa-shield-halved icon"></i> Defensive Awareness</h2>
-        <p>
-            Understanding how these attacks work helps defenders prepare mitigations,
-            recognize attack patterns early, and reduce operational and human impact.
-        </p>
+        <p>Knowing how these attacks work helps defenders prepare mitigations, spot attack patterns early, and reduce both operational and human impact.</p>
 
         <!-- Next Lesson Button -->
         <div class="next-lesson">
