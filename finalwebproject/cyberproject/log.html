@@ -1,84 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Cyber Shield | Access</title>
+  <meta charset="UTF-8">
+  <title>Cyber Shield | Access</title>
 
-<style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-    min-height: 100vh;
-    background: url("bjjimage.png") center / cover no-repeat fixed;
-    font-family: "Segoe UI", Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-.card {
-    width: 380px;
-    background: rgba(20,20,35,0.92);
-    backdrop-filter: blur(14px);
-    padding: 45px 30px 30px;
-    border-radius: 22px;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
-    text-align: center;
-    position: relative;
-    animation: fadeUp 0.8s ease;
-}
-.logo {
-    width: 90px;
-    height: 90px;
-    position: absolute;
-    top: -45px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.logo img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    box-shadow: 0 10px 30px rgba(125,71,255,0.7);
-}
-h2 { margin-top: 45px; margin-bottom: 8px; }
-.subtitle { font-size: 13px; opacity: 0.75; margin-bottom: 25px; }
-input, button, select {
-    width: 100%;
-    padding: 14px;
-    margin-bottom: 12px;
-    border-radius: 12px;
-    border: none;
-    font-size: 15px;
-}
-input { background: #101025; color: white; }
-input:focus { outline: 2px solid #7d47ff; }
-select { background: #101025; color: white; }
-button {
-    background: linear-gradient(135deg, #7d47ff, #5b2bff);
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.15s ease;
-}
-button:hover { transform: translateY(-1px); }
-.link { font-size: 14px; color: #a78bff; cursor: pointer; margin-top: 8px; }
-.message { margin-top: 10px; color: #ff6b6b; min-height: 18px; }
-.hidden { display: none; }
-@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-#welcome-text { font-size: 20px; font-weight: bold; color: #a78bff; }
-</style>
+  <style>
+    /* Reset & base styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: url("bjjimage.png") center / cover no-repeat fixed;
+      font-family: "Segoe UI", Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    /* Card container */
+    .card {
+      width: 380px;
+      background: rgba(20,20,35,0.92);
+      backdrop-filter: blur(14px);
+      padding: 45px 30px 30px;
+      border-radius: 22px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+      text-align: center;
+      position: relative;
+      animation: fadeUp 0.8s ease;
+    }
+
+    /* Logo styling */
+    .logo {
+      width: 90px; height: 90px;
+      position: absolute;
+      top: -45px; left: 50%;
+      transform: translateX(-50%);
+    }
+    .logo img {
+      width: 90px; height: 90px;
+      border-radius: 50%;
+      box-shadow: 0 10px 30px rgba(125,71,255,0.7);
+    }
+
+    /* Headings & subtitles */
+    h2 { margin-top: 45px; margin-bottom: 8px; }
+    .subtitle { font-size: 13px; opacity: 0.75; margin-bottom: 25px; }
+
+    /* Inputs, buttons, selects */
+    input, button, select {
+      width: 100%; padding: 14px; margin-bottom: 12px;
+      border-radius: 12px; border: none; font-size: 15px;
+    }
+    input, select { background: #101025; color: white; }
+    input:focus { outline: 2px solid #7d47ff; }
+    button {
+      background: linear-gradient(135deg, #7d47ff, #5b2bff);
+      color: white; font-weight: 600; cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+    button:hover { transform: translateY(-1px); }
+
+    /* Links & messages */
+    .link { font-size: 14px; color: #a78bff; cursor: pointer; margin-top: 8px; }
+    .message { margin-top: 10px; color: #ff6b6b; min-height: 18px; }
+    .hidden { display: none; }
+
+    /* Animations */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Welcome text */
+    #welcome-text { font-size: 20px; font-weight: bold; color: #a78bff; }
+  </style>
 </head>
 
 <body>
+  <div class="card">
+    <!-- Organization Logo -->
+    <div class="logo"><img src="logo.jpeg" alt="Organization Logo"></div>
 
-<div class="card">
-  <!-- Organization Logo -->
-  <div class="logo">
-    <img src="logo.jpeg" alt="Organization Logo">
-  </div>
-
-  <!-- SIGN UP -->
-  <div id="signup">
+    <!-- SIGN UP -->
+    <div id="signup">
       <h2>Create Account</h2>
       <div class="subtitle">Secure your digital space</div>
 
@@ -86,17 +88,17 @@ button:hover { transform: translateY(-1px); }
       <input id="su-email" type="email" placeholder="Email">
       <input id="su-pass" type="password" placeholder="Password">
       <select id="su-role">
-          <option value="user">Normal User</option>
-          <option value="admin">Admin</option>
+        <option value="user">Normal User</option>
+        <option value="admin">Admin</option>
       </select>
 
       <button onclick="signUp()">Sign Up</button>
       <div class="link" onclick="showLogin()">Already have an account? Log in</div>
       <div id="signup-msg" class="message"></div>
-  </div>
+    </div>
 
-  <!-- LOGIN -->
-  <div id="login" class="hidden">
+    <!-- LOGIN -->
+    <div id="login" class="hidden">
       <h2>Welcome Back</h2>
       <div class="subtitle">Access your shield</div>
 
@@ -104,96 +106,86 @@ button:hover { transform: translateY(-1px); }
       <input id="li-email" type="email" placeholder="Email">
       <input id="li-pass" type="password" placeholder="Password">
       <select id="li-role">
-          <option value="user">Normal User</option>
-          <option value="admin">Admin</option>
+        <option value="user">Normal User</option>
+        <option value="admin">Admin</option>
       </select>
 
       <button onclick="login()">Log In</button>
       <div class="link" onclick="showSignup()">Create an account</div>
       <div id="login-msg" class="message"></div>
-  </div>
+    </div>
 
-  <!-- WELCOME -->
-  <div id="welcome" class="hidden">
+    <!-- WELCOME -->
+    <div id="welcome" class="hidden">
       <h2 id="welcome-text"></h2>
       <div class="subtitle">Redirecting you…</div>
+    </div>
   </div>
-</div>
 
-<script>
-let users = JSON.parse(localStorage.getItem("cs_users")) || [];
+  <script>
+    // Store users in localStorage
+    let users = JSON.parse(localStorage.getItem("cs_users")) || [];
 
-function saveUsers() {
-    localStorage.setItem("cs_users", JSON.stringify(users));
-    exportUsers();
-}
-function exportUsers() {
-    const blob = new Blob([JSON.stringify(users, null, 2)], { type: "application/json" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "users.json";
-    a.click();
-}
-
-/* SIGN UP */
-function signUp() {
-    const name = get("su-name");
-    const email = get("su-email");
-    const pass = get("su-pass");
-    const role = document.getElementById("su-role").value;
-
-    if (!name || !email || !pass) {
-        msg("signup-msg", "All fields are required");
-        return;
-    }
-    if (users.some(u => u.email === email)) {
-        msg("signup-msg", "Email already exists");
-        return;
+    function saveUsers() {
+      localStorage.setItem("cs_users", JSON.stringify(users));
+      exportUsers();
     }
 
-    users.push({ name, email, pass, role, createdAt: new Date().toLocaleString() });
-    saveUsers();
-    welcome(name, role);
-}
-
-/* LOGIN */
-function login() {
-    const name = get("li-name");
-    const email = get("li-email");
-    const pass = get("li-pass");
-    const role = document.getElementById("li-role").value;
-
-    const user = users.find(u => u.name === name && u.email === email && u.pass === pass && u.role === role);
-    if (!user) {
-        msg("login-msg", "Invalid login details or role");
-        return;
+    // Export users as JSON file
+    function exportUsers() {
+      const blob = new Blob([JSON.stringify(users, null, 2)], { type: "application/json" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "users.json";
+      a.click();
     }
-    exportUsers();
-    welcome(user.name, user.role);
-}
 
-/* HELPERS */
-function welcome(name, role) {
-    hideAll();
-    document.getElementById("welcome-text").innerText = `Welcome, ${name}`;
-    document.getElementById("welcome").classList.remove("hidden");
+    /* SIGN UP */
+    function signUp() {
+      const name = get("su-name");
+      const email = get("su-email");
+      const pass = get("su-pass");
+      const role = document.getElementById("su-role").value;
 
-    setTimeout(() => {
-        if (role === "admin") {
-            window.location.href = "admin.html";
-        } else {
-            window.location.href = "homepage.html";
-        }
-    }, 2000);
-}
-function hideAll() {
-    ["signup","login","welcome"].forEach(id => document.getElementById(id).classList.add("hidden"));
-}
-function showLogin(){ hideAll(); document.getElementById("login").classList.remove("hidden"); }
-function showSignup(){ hideAll(); document.getElementById("signup").classList.remove("hidden"); }
-function msg(id,t){ document.getElementById(id).innerText=t; }
-function get(id){ return document.getElementById(id).value.trim(); }
-</script>
+      if (!name || !email || !pass) { msg("signup-msg", "All fields are required"); return; }
+      if (users.some(u => u.email === email)) { msg("signup-msg", "Email already exists"); return; }
 
+      users.push({ name, email, pass, role, createdAt: new Date().toLocaleString() });
+      saveUsers();
+      welcome(name, role);
+    }
+
+    /* LOGIN */
+    function login() {
+      const name = get("li-name");
+      const email = get("li-email");
+      const pass = get("li-pass");
+      const role = document.getElementById("li-role").value;
+
+      const user = users.find(u => u.name === name && u.email === email && u.pass === pass && u.role === role);
+      if (!user) { msg("login-msg", "Invalid login details or role"); return; }
+
+      exportUsers();
+      welcome(user.name, user.role);
+    }
+
+    /* HELPERS */
+    function welcome(name, role) {
+      hideAll();
+      document.getElementById("welcome-text").innerText = `Welcome, ${name}`;
+      document.getElementById("welcome").classList.remove("hidden");
+
+      setTimeout(() => {
+        if (role === "admin") { window.location.href = "admin.html"; }
+        else { window.location.href = "homepage.html"; }
+      }, 2000);
+    }
+
+    function hideAll() { ["signup","login","welcome"].forEach(id => document.getElementById(id).classList.add("hidden")); }
+    function showLogin(){ hideAll(); document.getElementById("login").classList.remove("hidden"); }
+    function showSignup(){ hideAll(); document.getElementById("signup").classList.remove("hidden"); }
+    function msg(id,t){ document.getElementById(id).innerText=t; }
+    function get(id){ return document.getElementById(id).value.trim(); }
+  </script>
 </body>
 </html>
