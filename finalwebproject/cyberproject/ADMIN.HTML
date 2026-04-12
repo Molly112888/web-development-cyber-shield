@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Cyber Shield | Admin Dashboard</title>
+<title>Admin Dashboard</title>
 <style>
 body {
     font-family: "Segoe UI", Arial, sans-serif;
@@ -11,9 +11,7 @@ body {
     margin: 0;
     padding: 20px;
 }
-h1 {
-    color: #7d47ff;
-}
+h1 { color: #7d47ff; }
 table {
     width: 100%;
     border-collapse: collapse;
@@ -40,12 +38,8 @@ button {
     cursor: pointer;
     transition: transform 0.15s ease;
 }
-button:hover {
-    transform: translateY(-1px);
-}
-#lesson-btn {
-    margin-top: 20px;
-}
+button:hover { transform: translateY(-1px); }
+#lesson-btn { margin-top: 20px; }
 </style>
 </head>
 <body>
@@ -54,21 +48,13 @@ button:hover {
 <p>Manage registered users below:</p>
 
 <table id="user-table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Created At</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
+    <thead><tr>
+        <th>Name</th><th>Email</th><th>Created At</th><th>Actions</th>
+    </tr></thead>
     <tbody></tbody>
 </table>
 
-<!-- Button to go to Lesson Upload Page -->
-<div id="lesson-btn">
-    <button onclick="goToLessons()">Upload Lesson Page for Learners</button>
-</div>
+<div id="lesson-btn"><button onclick="goToLessons()">Upload Lesson Page for Learners</button></div>
 
 <script>
 let users = JSON.parse(localStorage.getItem("cs_users")) || [];
@@ -78,14 +64,7 @@ function renderUsers() {
     tbody.innerHTML = "";
     users.forEach((u, i) => {
         const row = document.createElement("tr");
-        row.innerHTML = `
-            <td>${u.name}</td>
-            <td>${u.email}</td>
-            <td>${u.createdAt}</td>
-            <td>
-                <button onclick="deleteUser(${i})">Delete</button>
-            </td>
-        `;
+        row.innerHTML = `<td>${u.name}</td><td>${u.email}</td><td>${u.createdAt}</td><td><button onclick="deleteUser(${i})">Delete</button></td>`;
         tbody.appendChild(row);
     });
 }
@@ -98,13 +77,9 @@ function deleteUser(index) {
     }
 }
 
-function goToLessons() {
-    // Redirect to your lesson upload page for learners
-    window.location.href = "uploadedlesson.html"; 
-}
+function goToLessons() { window.location.href = "uploadedlesson.html"; }
 
 renderUsers();
 </script>
 
-</body>
-</html>
+<footer>© 2026 CyberShield · South Africa · All rights reserved</footer></body></html>
