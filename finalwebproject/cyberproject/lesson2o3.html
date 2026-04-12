@@ -1,203 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Lesson: Automated Data Capture in Modern Phishing</title>
-
-    <!-- ✅ Font Awesome Icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #ffffff;
-        }
-
-        /* Background image */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("slide 2.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            filter: blur(5px) brightness(0.7);
-            transform: scale(1.1);
-            z-index: -1;
-        }
-
-        /* Content container */
-        .container {
-            max-width: 900px;
-            margin: 70px auto;
-            padding: 40px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 12px;
-            box-shadow: 0 0 25px rgba(0,0,0,0.6);
-        }
-
-        /* ✅ ONLY ADDITION: proper logo centering */
-        .logo {
-            display: block;
-            margin: 0 auto 20px;
-            width: 50px;
-            height: auto;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 2.4em;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            margin-top: 30px;
-            color: #00d4ff;
-        }
-
-        h2 i {
-            margin-right: 10px;
-        }
-
-        p {
-            line-height: 1.7;
-            font-size: 1.05em;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-            line-height: 1.8;
-        }
-
-        ul li::before {
-            content: "\f058";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            color: #00d4ff;
-            margin-right: 10px;
-        }
-
-        .highlight {
-            color: #00d4ff;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        /* Next Lesson Button */
-        .next-btn {
-            display: block;
-            margin: 45px auto 0;
-            padding: 15px 45px;
-            font-size: 1.15em;
-            background: #00d4ff;
-            color: #000;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            width: fit-content;
-            transition: all 0.3s ease;
-        }
-
-        .next-btn i {
-            margin-left: 10px;
-        }
-
-        .next-btn:hover {
-            background: #00aacc;
-            transform: scale(1.05);
-            box-shadow: 0 0 18px rgba(0, 212, 255, 0.7);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Lesson: Automated Data Capture in Modern Phishing</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("slide 2.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      filter: blur(5px) brightness(0.7);
+      transform: scale(1.1);
+      z-index: -1;
+    }
+    .container {
+      max-width: 900px;
+      margin: 70px auto;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    }
+    .logo {
+      display: block;
+      margin: 0 auto 20px;
+      width: 50px;
+      height: auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.4em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin-top: 30px;
+      color: #00d4ff;
+    }
+    h2 i {
+      margin-right: 10px;
+    }
+    p {
+      line-height: 1.7;
+      font-size: 1.05em;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      line-height: 1.8;
+    }
+    ul li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: #00d4ff;
+      margin-right: 10px;
+    }
+    .highlight {
+      color: #00d4ff;
+      font-weight: bold;
+      text-align: center;
+    }
+    .next-btn {
+      display: block;
+      margin: 45px auto 0;
+      padding: 15px 45px;
+      font-size: 1.15em;
+      background: #00d4ff;
+      color: #000;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      width: fit-content;
+      transition: all 0.3s ease;
+    }
+    .next-btn i {
+      margin-left: 10px;
+    }
+    .next-btn:hover {
+      background: #00aacc;
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(0, 212, 255, 0.7);
+    }
+  </style>
 </head>
-
 <body>
-
-<div class="container">
-
-    <!-- ✅ LOGO (centered via CSS, lesson untouched) -->
+  <div class="container">
     <img src="logo.jpeg" class="logo" alt="Organization Logo">
-
-    <!-- Lesson Title -->
-    <h1>
-        <i class="fas fa-database"></i>
-        Automated Credential Capture &amp; Attack Alerts
-    </h1>
-
-    <p class="highlight">
-        <i class="fas fa-bell"></i>
-        How Modern Phishing Collects Data and Notifies Attackers
-    </p>
-
-    <!-- Section 1 -->
-    <h2>
-        <i class="fas fa-key"></i>
-        Credentials and Session Data Are Captured Automatically
-    </h2>
-
-    <p>
-        In modern phishing‑as‑a‑service platforms, attackers no longer manually collect
-        passwords or login details. Instead, the infrastructure is designed to
-        <span class="highlight">automatically capture credentials and session data</span>
-        as victims interact with login pages.
-    </p>
-
-    <p>
-        As victims enter usernames, passwords, and multi‑factor authentication codes,
-        all inputs pass through attacker‑controlled systems. This allows the platform
-        to record information in real time without interrupting the login process.
-    </p>
-
+    <h1><i class="fas fa-database"></i> Automated Credential Capture &amp; Attack Alerts</h1>
+    <p class="highlight"><i class="fas fa-bell"></i> How Modern Phishing Collects Data and Notifies Attackers</p>
+    <h2><i class="fas fa-key"></i> Credentials and Session Data Are Captured Automatically</h2>
+    <p>In modern phishing‑as‑a‑service platforms, attackers no longer manually collect passwords or login details. Instead, the infrastructure is designed to <span class="highlight">automatically capture credentials and session data</span> as victims interact with login pages.</p>
+    <p>As victims enter usernames, passwords, and multi‑factor authentication codes, all inputs pass through attacker‑controlled systems. This allows the platform to record information in real time without interrupting the login process.</p>
     <ul>
-        <li>Usernames and passwords are logged as they are typed</li>
-        <li>Session cookies and authentication tokens are captured</li>
-        <li>Keystrokes and form submissions are recorded automatically</li>
-        <li>No visible signs alert the victim to the attack</li>
+      <li>Usernames and passwords are logged as they are typed</li>
+      <li>Session cookies and authentication tokens are captured</li>
+      <li>Keystrokes and form submissions are recorded automatically</li>
+      <li>No visible signs alert the victim to the attack</li>
     </ul>
-
-    <!-- Section 2 -->
-    <h2>
-        <i class="fas fa-bell-concierge"></i>
-        Attackers Receive Alerts When Accounts Are Compromised
-    </h2>
-
-    <p>
-        Once credentials or session data are captured, phishing‑as‑a‑service platforms
-        immediately notify attackers. These alerts allow attackers to act quickly
-        before security systems detect unusual activity.
-    </p>
-
-    <p>
-        Notifications may be sent through messaging platforms or dashboards, providing
-        attackers with instant confirmation that an account has been compromised.
-    </p>
-
+    <h2><i class="fas fa-bell-concierge"></i> Attackers Receive Alerts When Accounts Are Compromised</h2>
+    <p>Once credentials or session data are captured, phishing‑as‑a‑service platforms immediately notify attackers. These alerts allow attackers to act quickly before security systems detect unusual activity.</p>
+    <p>Notifications may be sent through messaging platforms or dashboards, providing attackers with instant confirmation that an account has been compromised.</p>
     <ul>
-        <li>Automatic alerts confirm successful credential capture</li>
-        <li>Notifications are delivered in real time</li>
-        <li>Attackers can immediately access compromised accounts</li>
-        <li>Multiple accounts can be monitored simultaneously</li>
+      <li>Automatic alerts confirm successful credential capture</li>
+      <li>Notifications are delivered in real time</li>
+      <li>Attackers can immediately access compromised accounts</li>
+      <li>Multiple accounts can be monitored simultaneously</li>
     </ul>
-
-    <!-- Key Message -->
-    <p class="highlight" style="margin-top:30px;">
-        <i class="fas fa-triangle-exclamation"></i>
-        Automation allows attackers to scale phishing attacks quickly and quietly.
-    </p>
-
-    <!-- Next Lesson Button -->
-    <a href="lesson2o4.html" class="next-btn">
-        Next Lesson <i class="fas fa-arrow-right"></i>
-    </a>
-
-</div>
-
+    <p class="highlight" style="margin-top:30px;"><i class="fas fa-triangle-exclamation"></i> Automation allows attackers to scale phishing attacks quickly and quietly.</p>
+    <a href="lesson2o4.html" class="next-btn">Next Lesson <i class="fas fa-arrow-right"></i></a>
+  </div>
 </body>
 </html>
