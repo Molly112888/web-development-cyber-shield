@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Lesson 3 Quiz - Course Introduction</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
     <style>
         html, body {
             height: 100%;
@@ -12,15 +11,11 @@
             font-family: Arial, Helvetica, sans-serif;
             color: white;
         }
-
-        /* Background image */
         body::before {
             content: "";
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background-image: url("slide 3.png");
             background-repeat: no-repeat;
             background-size: cover;
@@ -29,8 +24,6 @@
             transform: scale(1.1);
             z-index: -1;
         }
-
-        /* Main container */
         .intro-container {
             max-width: 950px;
             margin: 80px auto;
@@ -39,37 +32,28 @@
             border-radius: 15px;
             text-align: center;
         }
-
-        /* Logo */
         .logo {
             display: block;
             margin: 0 auto 30px auto;
             width: 60px;
         }
-
         h1 {
             color: #00c3ff;
             text-align: center;
             font-size: 2.4em;
         }
-
         .highlight {
             color: #00c3ff;
             font-weight: bold;
         }
-
-        /* Quiz styling */
         .quiz-question {
             margin: 20px 0;
             text-align: left;
         }
-
         .quiz-options label {
             display: block;
             margin-bottom: 8px;
         }
-
-        /* Buttons */
         .btn {
             display: inline-block;
             margin-top: 25px;
@@ -83,14 +67,11 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-
         .btn:hover {
             background: #009ecf;
             transform: scale(1.05);
             box-shadow: 0 0 18px rgba(0, 195, 255, 0.7);
         }
-
-        /* Thank You Animation */
         #thankyou {
             display: none;
             font-size: 26px;
@@ -99,14 +80,11 @@
             animation: fadeInScale 2s ease forwards;
             margin-top: 30px;
         }
-
         @keyframes fadeInScale {
             0% { opacity: 0; transform: scale(0.5); }
             50% { opacity: 1; transform: scale(1.2); }
             100% { opacity: 1; transform: scale(1); }
         }
-
-        /* Lesson viewer styling */
         #lesson-list {
             margin-top: 40px;
             text-align: left;
@@ -127,17 +105,10 @@
     </style>
 </head>
 <body>
-
 <div class="intro-container">
-
-    <!-- Logo -->
     <img src="logo.jpeg" class="logo" alt="Organization Logo">
-
-    <!-- Quiz Title -->
     <h1><i class="fa-solid fa-question-circle"></i> Quiz: Course Introduction</h1>
     <p class="highlight">Test your knowledge from the Introduction lesson</p>
-
-    <!-- Quiz Questions -->
     <div id="quizQuestions">
         <div class="quiz-question">
             <h3>1. What is a watering hole attack?</h3>
@@ -148,7 +119,6 @@
                 <label><input type="radio" name="q1"> Exploiting outdated operating systems</label>
             </div>
         </div>
-
         <div class="quiz-question">
             <h3>2. What technology is often abused in browser‑based attacks?</h3>
             <div class="quiz-options">
@@ -158,7 +128,6 @@
                 <label><input type="radio" name="q2"> Printer software</label>
             </div>
         </div>
-
         <div class="quiz-question">
             <h3>3. Why are watering hole attacks dangerous?</h3>
             <div class="quiz-options">
@@ -168,7 +137,6 @@
                 <label><input type="radio" name="q3"> They are easily detected by antivirus</label>
             </div>
         </div>
-
         <div class="quiz-question">
             <h3>4. What is the purpose of JavaScript‑based keyloggers in these attacks?</h3>
             <div class="quiz-options">
@@ -178,33 +146,18 @@
                 <label><input type="radio" name="q4"> To notify users of suspicious activity</label>
             </div>
         </div>
-
         <button class="btn" onclick="showThankYou()">I'm Done</button>
     </div>
-
-    <!-- Thank You Message -->
     <div id="thankyou">🎉 Thanks for participating in our lesson! 🎉</div>
-
-    <!-- Uploaded Lessons Section -->
     <div id="lesson-list"></div>
-
 </div>
-
 <script>
     function showThankYou() {
-        // Hide quiz questions
         document.getElementById("quizQuestions").style.display = "none";
-        // Show thank you message
         document.getElementById("thankyou").style.display = "block";
-        // Redirect after 3 seconds
-        setTimeout(function() {
-            window.location.href = "homepage.html";
-        }, 3000);
+        setTimeout(function() { window.location.href = "homepage.html"; }, 3000);
     }
-
-    // Lesson viewer script
     let lessons = JSON.parse(localStorage.getItem("cs_lessons")) || [];
-
     function renderLessons() {
         const container = document.getElementById("lesson-list");
         container.innerHTML = "<h2>Uploaded Lessons</h2>";
@@ -225,6 +178,5 @@
     }
     renderLessons();
 </script>
-
 </body>
 </html>
