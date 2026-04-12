@@ -2,11 +2,8 @@
 <html>
 <head>
     <title>Identifying Exploitation of User Trust</title>
-
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         html, body {
             height: 100%;
@@ -14,8 +11,6 @@
             font-family: Arial, Helvetica, sans-serif;
             color: white;
         }
-
-        /* Background image (UNCHANGED) */
         body::before {
             content: "";
             position: fixed;
@@ -31,8 +26,6 @@
             transform: scale(1.1);
             z-index: -1;
         }
-
-        /* Lesson container */
         .lesson-container {
             max-width: 950px;
             margin: 70px auto;
@@ -40,52 +33,41 @@
             background: rgba(0, 0, 0, 0.65);
             border-radius: 15px;
         }
-
-        /* ✅ CENTER LOGO (ONLY ADDITION) */
         .logo {
             display: block;
             margin: 0 auto 25px auto;
             width: 50px;
         }
-
         h1, h2, h3 {
             color: #00c3ff;
             text-align: center;
         }
-
         .icon {
             color: #00c3ff;
             margin-right: 8px;
         }
-
         p {
             font-size: 16px;
             line-height: 1.7;
             text-align: justify;
             margin-bottom: 20px;
         }
-
         ul {
             margin-left: 30px;
         }
-
         li {
             margin-bottom: 12px;
             font-size: 16px;
         }
-
         .highlight {
             color: #00c3ff;
             font-weight: bold;
         }
-
-        /* Next Lesson Button */
         .next-lesson {
             display: flex;
             justify-content: center;
             margin-top: 50px;
         }
-
         .next-lesson a {
             text-decoration: none;
             background-color: #00c3ff;
@@ -96,124 +78,40 @@
             font-weight: bold;
             transition: 0.3s ease;
         }
-
         .next-lesson a:hover {
             background-color: #009ecf;
             transform: scale(1.05);
         }
     </style>
 </head>
-
 <body>
-
 <div class="lesson-container">
-
-    <!-- ✅ LOGO CENTERED -->
     <img src="logo.jpeg" class="logo" alt="Organization Logo">
-
-    <h1>
-        <i class="fa-solid fa-user-shield icon"></i>
-        Identifying How Malicious Websites Exploit User Trust
-    </h1>
-
-    <h2>
-        <i class="fa-solid fa-globe icon"></i>
-        Watering Hole Attacks & ScanBox Keylogging
-    </h2>
-
-    <p>
-        Malicious websites involved in <span class="highlight">watering hole attacks</span>
-        rely heavily on <span class="highlight">user trust</span> rather than technical flaws alone.
-        These websites are designed to look familiar, legitimate, and safe, encouraging users
-        to visit them without suspicion.
-    </p>
-
-    <h3>
-        <i class="fa-solid fa-eye icon"></i>
-        Why Users Trust Malicious Websites
-    </h3>
-
-    <p>
-        Attackers understand that users are more likely to trust websites they recognize.
-        In watering hole attacks, adversaries compromise or imitate websites that victims
-        already visit regularly, such as news sites, research portals, or industry‑specific pages.
-    </p>
-
+    <h1><i class="fa-solid fa-user-shield icon"></i> Identifying How Malicious Websites Exploit User Trust</h1>
+    <h2><i class="fa-solid fa-globe icon"></i> Watering Hole Attacks & ScanBox Keylogging</h2>
+    <p>Malicious websites involved in <span class="highlight">watering hole attacks</span> rely heavily on <span class="highlight">user trust</span> rather than technical flaws alone. These websites are designed to look familiar, legitimate, and safe, encouraging users to visit them without suspicion.</p>
+    <h3><i class="fa-solid fa-eye icon"></i> Why Users Trust Malicious Websites</h3>
+    <p>Attackers understand that users are more likely to trust websites they recognize. In watering hole attacks, adversaries compromise or imitate websites that victims already visit regularly, such as news sites, research portals, or industry‑specific pages.</p>
     <ul>
         <li><i class="fa-solid fa-check icon"></i> Websites appear professional and familiar</li>
         <li><i class="fa-solid fa-check icon"></i> Content is copied from legitimate sources</li>
         <li><i class="fa-solid fa-check icon"></i> URLs closely resemble trusted websites</li>
         <li><i class="fa-solid fa-check icon"></i> No visible warnings or errors are present</li>
     </ul>
-
-    <h3>
-        <i class="fa-solid fa-code icon"></i>
-        How Malicious Code Exploits Trust
-    </h3>
-
-    <p>
-        Once a trusted website is compromised, attackers inject malicious JavaScript code
-        directly into the webpage. Because modern browsers are designed to automatically execute
-        JavaScript, the malicious code runs without the user’s knowledge.
-    </p>
-
-    <p>
-        In attacks involving <span class="highlight">ScanBox</span>, the injected JavaScript performs
-        covert reconnaissance and keylogging while the page continues to function normally.
-        This allows attackers to steal data while maintaining the illusion of safety.
-    </p>
-
-    <h3>
-        <i class="fa-solid fa-keyboard icon"></i>
-        Trust Exploitation Through Keylogging
-    </h3>
-
-    <p>
-        JavaScript‑based keylogging exploits trust by capturing keystrokes entered on a webpage
-        that users believe to be safe. Victims may type login credentials, search queries, or
-        sensitive information without realizing it is being recorded.
-    </p>
-
-    <p>
-        Unlike traditional malware, no warning messages or downloads alert the user.
-        The browser simply executes the malicious script as part of the webpage.
-    </p>
-
-    <h3>
-        <i class="fa-solid fa-triangle-exclamation icon"></i>
-        Why This Technique Is Dangerous
-    </h3>
-
-    <p>
-        The exploitation of user trust makes watering hole attacks especially dangerous.
-        Because users do not expect harm from trusted websites, they are less cautious and
-        more likely to enter sensitive information.
-    </p>
-
-    <p>
-        This approach allows attackers to conduct long‑term surveillance and intelligence
-        gathering without triggering security alerts or user suspicion.
-    </p>
-
-    <h3>
-        <i class="fa-solid fa-graduation-cap icon"></i>
-        Learning Outcome
-    </h3>
-
-    <p>
-        Learners should understand that malicious websites succeed not by breaking systems,
-        but by manipulating trust. Recognizing how attackers exploit familiarity and legitimacy
-        is essential for developing effective cybersecurity awareness and safer browsing habits.
-    </p>
-
-    <!-- NEXT LESSON BUTTON -->
+    <h3><i class="fa-solid fa-code icon"></i> How Malicious Code Exploits Trust</h3>
+    <p>Once a trusted website is compromised, attackers inject malicious JavaScript code directly into the webpage. Because modern browsers are designed to automatically execute JavaScript, the malicious code runs without the user’s knowledge.</p>
+    <p>In attacks involving <span class="highlight">ScanBox</span>, the injected JavaScript performs covert reconnaissance and keylogging while the page continues to function normally. This allows attackers to steal data while maintaining the illusion of safety.</p>
+    <h3><i class="fa-solid fa-keyboard icon"></i> Trust Exploitation Through Keylogging</h3>
+    <p>JavaScript‑based keylogging exploits trust by capturing keystrokes entered on a webpage that users believe to be safe. Victims may type login credentials, search queries, or sensitive information without realizing it is being recorded.</p>
+    <p>Unlike traditional malware, no warning messages or downloads alert the user. The browser simply executes the malicious script as part of the webpage.</p>
+    <h3><i class="fa-solid fa-triangle-exclamation icon"></i> Why This Technique Is Dangerous</h3>
+    <p>The exploitation of user trust makes watering hole attacks especially dangerous. Because users do not expect harm from trusted websites, they are less cautious and more likely to enter sensitive information.</p>
+    <p>This approach allows attackers to conduct long‑term surveillance and intelligence gathering without triggering security alerts or user suspicion.</p>
+    <h3><i class="fa-solid fa-graduation-cap icon"></i> Learning Outcome</h3>
+    <p>Learners should understand that malicious websites succeed not by breaking systems, but by manipulating trust. Recognizing how attackers exploit familiarity and legitimacy is essential for developing effective cybersecurity awareness and safer browsing habits.</p>
     <div class="next-lesson">
-        <a href="lesson_next.html">
-            Next Lesson <i class="fa-solid fa-arrow-right"></i>
-        </a>
+        <a href="lesson_next.html">Next Lesson <i class="fa-solid fa-arrow-right"></i></a>
     </div>
-
 </div>
-
 </body>
 </html>
