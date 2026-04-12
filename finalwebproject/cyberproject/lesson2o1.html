@@ -1,193 +1,129 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lesson: Phishing‑as‑a‑Service (PhaaS)</title>
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #ffffff;
-        }
-
-        /* Background image */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("slide 2.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            filter: blur(5px) brightness(0.7);
-            transform: scale(1.1);
-            z-index: -1;
-        }
-
-        /* Main container */
-        .container {
-            max-width: 900px;
-            margin: 70px auto;
-            padding: 40px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 12px;
-            box-shadow: 0 0 25px rgba(0,0,0,0.6);
-        }
-
-        /* ✅ CENTERED LOGO (ONLY ADDITION) */
-        .logo {
-            display: block;
-            margin: 0 auto 25px;
-            width: 60px;
-            height: auto;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 2.4em;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            margin-top: 30px;
-            color: #00d4ff;
-        }
-
-        h2 i {
-            margin-right: 10px;
-        }
-
-        p {
-            line-height: 1.7;
-            font-size: 1.05em;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-            line-height: 1.8;
-        }
-
-        ul li::before {
-            content: "\f058";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            color: #00d4ff;
-            margin-right: 10px;
-        }
-
-        .highlight {
-            color: #00d4ff;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        /* Next Button */
-        .next-btn {
-            display: block;
-            margin: 45px auto 0;
-            padding: 15px 45px;
-            font-size: 1.15em;
-            background: #00d4ff;
-            color: #000;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            width: fit-content;
-            transition: all 0.3s ease;
-        }
-
-        .next-btn i {
-            margin-left: 10px;
-        }
-
-        .next-btn:hover {
-            background: #00aacc;
-            transform: scale(1.05);
-            box-shadow: 0 0 18px rgba(0, 212, 255, 0.7);
-        }
-    </style>
+  <title>Lesson: Phishing‑as‑a‑Service (PhaaS)</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("slide 2.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      filter: blur(5px) brightness(0.7);
+      transform: scale(1.1);
+      z-index: -1;
+    }
+    .container {
+      max-width: 900px;
+      margin: 70px auto;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    }
+    .logo {
+      display: block;
+      margin: 0 auto 25px;
+      width: 60px;
+      height: auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.4em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin-top: 30px;
+      color: #00d4ff;
+    }
+    h2 i {
+      margin-right: 10px;
+    }
+    p {
+      line-height: 1.7;
+      font-size: 1.05em;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      line-height: 1.8;
+    }
+    ul li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: #00d4ff;
+      margin-right: 10px;
+    }
+    .highlight {
+      color: #00d4ff;
+      font-weight: bold;
+      text-align: center;
+    }
+    .next-btn {
+      display: block;
+      margin: 45px auto 0;
+      padding: 15px 45px;
+      font-size: 1.15em;
+      background: #00d4ff;
+      color: #000;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      width: fit-content;
+      transition: all 0.3s ease;
+    }
+    .next-btn i {
+      margin-left: 10px;
+    }
+    .next-btn:hover {
+      background: #00aacc;
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(0, 212, 255, 0.7);
+    }
+  </style>
 </head>
-
 <body>
-
-<div class="container">
-
-    <!-- ✅ LOGO ADDED (CONTENT UNCHANGED BELOW) -->
+  <div class="container">
     <img src="logo.jpeg" class="logo" alt="Organization Logo">
-
-    <!-- Lesson Title -->
     <h1><i class="fas fa-sitemap"></i> Phishing‑as‑a‑Service (PhaaS)</h1>
-
-    <p class="highlight">
-        <i class="fas fa-cloud"></i>
-        Understanding How Modern Phishing Is Sold and Operated
-    </p>
-
-    <!-- What is PhaaS -->
+    <p class="highlight"><i class="fas fa-cloud"></i> Understanding How Modern Phishing Is Sold and Operated</p>
     <h2><i class="fas fa-circle-info"></i> What Is Phishing‑as‑a‑Service?</h2>
-    <p>
-        <span class="highlight">Phishing‑as‑a‑Service (PhaaS)</span> is a cybercrime model where attackers
-        sell or rent ready‑made phishing tools to other criminals. Instead of building phishing
-        websites and infrastructure themselves, users simply subscribe to a service that provides
-        everything needed to launch attacks.
-    </p>
-
-    <p>
-        This model is similar to legitimate <span class="highlight">Software‑as‑a‑Service (SaaS)</span>
-        platforms, but it is used for malicious purposes.
-    </p>
-
-    <!-- Why PhaaS Exists -->
+    <p><span class="highlight">Phishing‑as‑a‑Service (PhaaS)</span> is a cybercrime model where attackers sell or rent ready‑made phishing tools to other criminals. Instead of building phishing websites and infrastructure themselves, users simply subscribe to a service that provides everything needed to launch attacks.</p>
+    <p>This model is similar to legitimate <span class="highlight">Software‑as‑a‑Service (SaaS)</span> platforms, but it is used for malicious purposes.</p>
     <h2><i class="fas fa-bolt"></i> Why PhaaS Is So Effective</h2>
-    <p>
-        Traditional phishing required technical skills such as server configuration, domain
-        management, and page creation. PhaaS removes these challenges by offering:
-    </p>
-
+    <p>Traditional phishing required technical skills such as server configuration, domain management, and page creation. PhaaS removes these challenges by offering:</p>
     <ul>
-        <li>Pre‑built phishing infrastructure</li>
-        <li>Automated setup and deployment</li>
-        <li>Easy‑to‑use control panels</li>
-        <li>Technical support through criminal forums</li>
+      <li>Pre‑built phishing infrastructure</li>
+      <li>Automated setup and deployment</li>
+      <li>Easy‑to‑use control panels</li>
+      <li>Technical support through criminal forums</li>
     </ul>
-
-    <!-- How It Operates -->
     <h2><i class="fas fa-diagram-project"></i> How PhaaS Operates</h2>
-    <p>
-        In a PhaaS model, the service provider maintains the infrastructure while customers
-        focus only on targeting victims. The process typically works as follows:
-    </p>
-
+    <p>In a PhaaS model, the service provider maintains the infrastructure while customers focus only on targeting victims. The process typically works as follows:</p>
     <ul>
-        <li>The attacker selects a brand to impersonate (e.g., email or cloud services)</li>
-        <li>The service generates deceptive phishing links</li>
-        <li>Victims interact with real or cloned login pages</li>
-        <li>Credentials and session data are captured automatically</li>
-        <li>Attackers receive alerts when accounts are compromised</li>
+      <li>The attacker selects a brand to impersonate (e.g., email or cloud services)</li>
+      <li>The service generates deceptive phishing links</li>
+      <li>Victims interact with real or cloned login pages</li>
+      <li>Credentials and session data are captured automatically</li>
+      <li>Attackers receive alerts when accounts are compromised</li>
     </ul>
-
-    <!-- Why It’s Dangerous -->
     <h2><i class="fas fa-skull-crossbones"></i> Why PhaaS Is Dangerous</h2>
-    <p>
-        Phishing‑as‑a‑service dramatically lowers the barrier to entry for cybercrime. Even
-        individuals with little or no technical knowledge can launch sophisticated phishing
-        attacks that bypass traditional security controls.
-    </p>
-
-    <!-- Next Lesson Button -->
-    <a href="lesson2o2.html" class="next-btn">
-        Next Lesson <i class="fas fa-arrow-right"></i>
-    </a>
-
-</div>
-
+    <p>Phishing‑as‑a‑service dramatically lowers the barrier to entry for cybercrime. Even individuals with little or no technical knowledge can launch sophisticated phishing attacks that bypass traditional security controls.</p>
+    <a href="lesson2o2.html" class="next-btn">Next Lesson <i class="fas fa-arrow-right"></i></a>
+  </div>
 </body>
 </html>
