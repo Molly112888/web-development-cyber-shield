@@ -1,183 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Cyber Threat Intelligence Lessons</title>
+  <meta charset="UTF-8">
+  <title>Cyber Threat Intelligence Lessons</title>
 
-<!-- Font Awesome Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<style>
-html, body {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #f1f1f1;
-}
+  <style>
+    /* Base layout */
+    html, body {
+      height: 100%; margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #f1f1f1;
+    }
 
-/* Background image */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: url("slide 1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: blur(5px) brightness(0.7);
-    transform: scale(1.1);
-    z-index: -1;
-}
+    /* Background image with blur & dim effect */
+    body::before {
+      content: ""; position: fixed; inset: 0;
+      background: url("slide 1.png") center / cover no-repeat;
+      filter: blur(5px) brightness(0.7);
+      transform: scale(1.1);
+      z-index: -1;
+    }
 
-/* Main container */
-.content {
-    max-width: 1200px;
-    margin: 60px auto;
-    background-color: rgba(0,0,0,0.78);
-    padding: 50px;
-    border-radius: 16px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.85);
-}
+    /* Main content container */
+    .content {
+      max-width: 1200px;
+      margin: 60px auto;
+      background: rgba(0,0,0,0.78);
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.85);
+    }
 
-/* ✅ CENTER LOGO */
-.logo {
-    display: block;
-    margin: 0 auto 20px auto;
-}
+    /* Centered logo */
+    .logo {
+      display: block;
+      margin: 0 auto 20px auto;
+    }
 
-/* Headings */
-h1, h2, h3 {
-    color: #1da1ff;
-    text-align: center;
-}
+    /* Headings */
+    h1, h2, h3 {
+      color: #1da1ff;
+      text-align: center;
+    }
 
-.subtitle {
-    text-align: center;
-    color: #ccc;
-    font-size: 17px;
-    margin-bottom: 50px;
-}
+    /* Subtitle text */
+    .subtitle {
+      text-align: center;
+      color: #ccc;
+      font-size: 17px;
+      margin-bottom: 50px;
+    }
 
-/* Lesson grid */
-.lesson-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
+    /* Lesson grid layout */
+    .lesson-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
 
-/* Lesson cards (buttons) */
-.lesson-card {
-    background: rgba(255,255,255,0.08);
-    border-radius: 14px;
-    padding: 30px;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
+    /* Lesson cards (interactive buttons) */
+    .lesson-card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 30px;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    }
 
-/* ✅ PURPLE HOVER EFFECT */
-.lesson-card:hover {
-    transform: translateY(-8px);
-    background: rgba(128, 0, 128, 0.15);
-    box-shadow: 0 0 22px rgba(128, 0, 128, 0.9);
-}
+    /* Hover effect with purple glow */
+    .lesson-card:hover {
+      transform: translateY(-8px);
+      background: rgba(128, 0, 128, 0.15);
+      box-shadow: 0 0 22px rgba(128, 0, 128, 0.9);
+    }
 
-/* Icons */
-.lesson-card i {
-    font-size: 52px;
-    color: #1da1ff;
-    margin-bottom: 20px;
-    transition: color 0.3s ease;
-}
+    /* Lesson icons */
+    .lesson-card i {
+      font-size: 52px;
+      color: #1da1ff;
+      margin-bottom: 20px;
+      transition: color 0.3s ease;
+    }
 
-/* Titles */
-.lesson-card h3 {
-    margin-bottom: 12px;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
+    /* Lesson titles */
+    .lesson-card h3 {
+      margin-bottom: 12px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
 
-/* ✅ Icon & title turn purple on hover */
-.lesson-card:hover i,
-.lesson-card:hover h3 {
-    color: purple;
-}
+    /* Icon & title turn purple on hover */
+    .lesson-card:hover i,
+    .lesson-card:hover h3 {
+      color: purple;
+    }
 
-/* Lesson text */
-.lesson-card p {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #ddd;
-}
+    /* Lesson description text */
+    .lesson-card p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #ddd;
+    }
 
-/* Footer */
-footer {
-    margin-top: 50px;
-    text-align: center;
-    font-size: 14px;
-    color: #ccc;
-}
-</style>
+    /* Footer */
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
 </head>
 
 <body>
-
-<div class="content">
-
-    <!-- LOGO -->
+  <div class="content">
+    <!-- Logo -->
     <img src="logo.jpeg" class="logo" alt="Organization Logo" width="50">
 
-    <h1>
-        <i class="fa-solid fa-shield-halved"></i> Cyber Threat Intelligence
-    </h1>
+    <!-- Page title -->
+    <h1><i class="fa-solid fa-shield-halved"></i> Cyber Threat Intelligence</h1>
 
+    <!-- Subtitle -->
     <p class="subtitle">
-        Select a lesson to explore real‑world cyber threats, criminal ecosystems,
-        and modern attribution techniques.
+      Select a lesson to explore real‑world cyber threats, criminal ecosystems,
+      and modern attribution techniques.
     </p>
 
+    <!-- Lessons grid -->
     <div class="lesson-grid">
+      <!-- Lesson 1 -->
+      <a href="lesson1intro.html" class="lesson-card">
+        <i class="fa-solid fa-skull-crossbones"></i>
+        <h3>Lesson 1</h3>
+        <p><strong>GandCrab & REvil</strong><br>The Evolution of Ransomware</p>
+      </a>
 
-        <!-- Lesson 1 -->
-        <a href="lesson1intro.html" class="lesson-card">
-            <i class="fa-solid fa-skull-crossbones"></i>
-            <h3>Lesson 1</h3>
-            <p><strong>GandCrab & REvil</strong><br>
-            The Evolution of Ransomware</p>
-        </a>
+      <!-- Lesson 2 -->
+      <a href="lesson2intro.html" class="lesson-card">
+        <i class="fa-solid fa-envelope-circle-check"></i>
+        <h3>Lesson 2</h3>
+        <p><strong>Starkiller</strong><br>Phishing‑as‑a‑Service and MFA Bypass</p>
+      </a>
 
-        <!-- Lesson 2 -->
-        <a href="lesson2intro.html" class="lesson-card">
-            <i class="fa-solid fa-envelope-circle-check"></i>
-            <h3>Lesson 2</h3>
-            <p><strong>Starkiller</strong><br>
-            Phishing‑as‑a‑Service and MFA Bypass</p>
-        </a>
+      <!-- Lesson 3 -->
+      <a href="lesson3intro.html" class="lesson-card">
+        <i class="fa-solid fa-globe"></i>
+        <h3>Lesson 3</h3>
+        <p><strong>ScanBox</strong><br>Watering Hole Espionage Campaigns</p>
+      </a>
 
-        <!-- Lesson 3 -->
-        <a href="lesson3intro.html" class="lesson-card">
-            <i class="fa-solid fa-globe"></i>
-            <h3>Lesson 3</h3>
-            <p><strong>ScanBox</strong><br>
-            Watering Hole Espionage Campaigns</p>
-        </a>
-
-        <!-- Lesson 4 -->
-        <a href="lesson4intro.html" class="lesson-card">
-            <i class="fa-solid fa-network-wired"></i>
-            <h3>Lesson 4</h3>
-            <p><strong>Kimwolf Botnet</strong><br>
-            OSINT‑Based Attribution</p>
-        </a>
-
+      <!-- Lesson 4 -->
+      <a href="lesson4intro.html" class="lesson-card">
+        <i class="fa-solid fa-network-wired"></i>
+        <h3>Lesson 4</h3>
+        <p><strong>Kimwolf Botnet</strong><br>OSINT‑Based Attribution</p>
+      </a>
     </div>
 
-    <footer>
-        <p>Cybersecurity Education • Threat Intelligence Program</p>
-    </footer>
-
-</div>
-
+    <!-- Footer -->
+    <footer><p>Cybersecurity Education • Threat Intelligence Program</p></footer>
+  </div>
 </body>
 </html>
