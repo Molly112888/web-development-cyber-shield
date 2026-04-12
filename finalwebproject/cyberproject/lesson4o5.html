@@ -1,30 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Lesson 3 Quiz - Course Introduction</title>
+    <meta charset="UTF-8"><title>Lesson 3 Quiz - Course Introduction</title>
+
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
+        /* General page setup */
         html, body {
-            height: 100%;
-            margin: 0;
+            height: 100%; margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            color: white;
+            color: #fff;
         }
 
-        /* Background image */
+        /* Background with blur + dim effect */
         body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("slide 3.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+            content: ""; position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: url("slide 3.png") no-repeat center/cover;
             filter: blur(5px) brightness(0.7);
             transform: scale(1.1);
             z-index: -1;
@@ -32,74 +26,44 @@
 
         /* Main container */
         .intro-container {
-            max-width: 950px;
-            margin: 80px auto;
+            max-width: 950px; margin: 80px auto;
             padding: 45px;
-            background: rgba(0, 0, 0, 0.65);
+            background: rgba(0,0,0,0.65);
             border-radius: 15px;
             text-align: center;
         }
 
         /* Logo */
-        .logo {
-            display: block;
-            margin: 0 auto 30px auto;
-            width: 60px;
-        }
+        .logo { display: block; margin: 0 auto 30px auto; width: 60px; }
 
-        h1 {
-            color: #00c3ff;
-            text-align: center;
-            font-size: 2.4em;
-        }
-
-        .highlight {
-            color: #00c3ff;
-            font-weight: bold;
-        }
+        /* Headings */
+        h1 { color: #00c3ff; font-size: 2.4em; text-align: center; }
+        .highlight { color: #00c3ff; font-weight: bold; }
 
         /* Quiz styling */
-        .quiz-question {
-            margin: 20px 0;
-            text-align: left;
-        }
-
-        .quiz-options label {
-            display: block;
-            margin-bottom: 8px;
-        }
+        .quiz-question { margin: 20px 0; text-align: left; }
+        .quiz-options label { display: block; margin-bottom: 8px; }
 
         /* Buttons */
         .btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 30px;
-            font-size: 1.1em;
-            background: #00c3ff;
-            color: #000;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
+            display: inline-block; margin-top: 25px;
+            padding: 12px 30px; font-size: 1.1em;
+            background: #00c3ff; color: #000;
+            border-radius: 30px; text-decoration: none;
+            font-weight: bold; cursor: pointer;
             transition: all 0.3s ease;
         }
-
         .btn:hover {
-            background: #009ecf;
-            transform: scale(1.05);
-            box-shadow: 0 0 18px rgba(0, 195, 255, 0.7);
+            background: #009ecf; transform: scale(1.05);
+            box-shadow: 0 0 18px rgba(0,195,255,0.7);
         }
 
         /* Thank You Animation */
         #thankyou {
-            display: none;
-            font-size: 26px;
-            font-weight: bold;
-            color: #00c3ff;
+            display: none; font-size: 26px; font-weight: bold;
+            color: #00c3ff; margin-top: 30px;
             animation: fadeInScale 2s ease forwards;
-            margin-top: 30px;
         }
-
         @keyframes fadeInScale {
             0% { opacity: 0; transform: scale(0.5); }
             50% { opacity: 1; transform: scale(1.2); }
@@ -107,18 +71,11 @@
         }
 
         /* Lesson viewer styling */
-        #lesson-list {
-            margin-top: 40px;
-            text-align: left;
-        }
-        #lesson-list h2 {
-            color: #7d47ff;
-            margin-bottom: 15px;
-        }
+        #lesson-list { margin-top: 40px; text-align: left; }
+        #lesson-list h2 { color: #7d47ff; margin-bottom: 15px; }
         .lesson {
             background: rgba(20,20,40,0.85);
-            padding: 15px;
-            margin: 15px 0;
+            padding: 15px; margin: 15px 0;
             border-radius: 12px;
         }
         .lesson h3 { color: #35c6ff; margin-bottom: 8px; }
@@ -126,8 +83,8 @@
         .lesson small { color: #a78bff; }
     </style>
 </head>
-<body>
 
+<body>
 <div class="intro-container">
 
     <!-- Logo -->
@@ -179,6 +136,7 @@
             </div>
         </div>
 
+        <!-- Submit Button -->
         <button class="btn" onclick="showThankYou()">I'm Done</button>
     </div>
 
@@ -197,9 +155,7 @@
         // Show thank you message
         document.getElementById("thankyou").style.display = "block";
         // Redirect after 3 seconds
-        setTimeout(function() {
-            window.location.href = "homepage.html";
-        }, 3000);
+        setTimeout(function() { window.location.href = "homepage.html"; }, 3000);
     }
 
     // Lesson viewer script
@@ -225,6 +181,5 @@
     }
     renderLessons();
 </script>
-
 </body>
 </html>
