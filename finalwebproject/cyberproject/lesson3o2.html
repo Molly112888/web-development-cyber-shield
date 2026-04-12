@@ -1,206 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Explain JavaScript‑Based Keylogging</title>
+  <title>Explain JavaScript‑Based Keylogging</title>
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
-        }
+  <style>
+    /* Base styling */
+    html, body { height: 100%; margin: 0; font-family: Arial, Helvetica, sans-serif; color: white; }
 
-        /* Background image */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("slide 3.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            filter: blur(5px) brightness(0.7);
-            transform: scale(1.1);
-            z-index: -1;
-        }
+    /* Background image with blur and dark overlay */
+    body::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background-image: url("slide 3.png"); background-repeat: no-repeat; background-size: cover; background-position: center;
+      filter: blur(5px) brightness(0.7); transform: scale(1.1); z-index: -1; }
 
-        /* Lesson container */
-        .lesson-container {
-            max-width: 950px;
-            margin: 70px auto;
-            padding: 40px;
-            background: rgba(0, 0, 0, 0.65);
-            border-radius: 15px;
-        }
+    /* Lesson container */
+    .lesson-container { max-width: 950px; margin: 70px auto; padding: 40px; background: rgba(0, 0, 0, 0.65); border-radius: 15px; }
 
-        /* ✅ CENTER LOGO */
-        .logo {
-            display: block;
-            margin: 0 auto 25px auto;
-            width: 50px;
-        }
+    /* Centered logo */
+    .logo { display: block; margin: 0 auto 25px auto; width: 50px; }
 
-        h1, h2, h3 {
-            color: #00c3ff;
-            text-align: center;
-        }
+    /* Headings */
+    h1, h2, h3 { color: #00c3ff; text-align: center; }
+    .icon { color: #00c3ff; margin-right: 8px; }
 
-        .icon {
-            color: #00c3ff;
-            margin-right: 8px;
-        }
+    /* Paragraphs */
+    p { font-size: 16px; line-height: 1.7; text-align: justify; }
 
-        p {
-            font-size: 16px;
-            line-height: 1.7;
-            text-align: justify;
-        }
+    /* Lists */
+    ul { margin-left: 30px; }
+    li { margin-bottom: 10px; }
 
-        ul {
-            margin-left: 30px;
-        }
+    /* Highlighted text */
+    .highlight { color: #00c3ff; font-weight: bold; }
 
-        li {
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            color: #00c3ff;
-            font-weight: bold;
-        }
-
-        /* Next Lesson Button */
-        .next-lesson {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-        }
-
-        .next-lesson a {
-            text-decoration: none;
-            background-color: #00c3ff;
-            color: #000;
-            padding: 14px 34px;
-            border-radius: 30px;
-            font-size: 16px;
-            font-weight: bold;
-            transition: 0.3s ease;
-        }
-
-        .next-lesson a:hover {
-            background-color: #009ecf;
-            transform: scale(1.05);
-        }
-    </style>
+    /* Next Lesson Button */
+    .next-lesson { display: flex; justify-content: center; margin-top: 50px; }
+    .next-lesson a { text-decoration: none; background-color: #00c3ff; color: #000; padding: 14px 34px;
+      border-radius: 30px; font-size: 16px; font-weight: bold; transition: 0.3s ease; }
+    .next-lesson a:hover { background-color: #009ecf; transform: scale(1.05); }
+  </style>
 </head>
 
 <body>
-
-<div class="lesson-container">
-
-    <!-- ✅ CENTERED LOGO -->
+  <div class="lesson-container">
+    <!-- Logo -->
     <img src="logo.jpeg" class="logo" alt="Organization Logo">
 
-    <h1>
-        <i class="fa-solid fa-keyboard icon"></i>
-        Lesson: Explaining JavaScript‑Based Keylogging
-    </h1>
+    <!-- Lesson Title -->
+    <h1><i class="fa-solid fa-keyboard icon"></i> Lesson: Explaining JavaScript‑Based Keylogging</h1>
 
-    <h2>
-        <i class="fa-solid fa-circle-info icon"></i>
-        Introduction
-    </h2>
+    <!-- Introduction -->
+    <h2><i class="fa-solid fa-circle-info icon"></i> Introduction</h2>
+    <p><span class="highlight">JavaScript‑based keylogging</span> is a technique used by attackers to capture a user’s keystrokes directly inside a web browser. Unlike traditional keyloggers, this method does not require the installation of software on the victim’s device.</p>
+    <p>Instead, malicious JavaScript code is executed when a user visits a compromised website, allowing attackers to silently record everything typed into a webpage.</p>
 
-    <p>
-        <span class="highlight">JavaScript‑based keylogging</span> is a technique used by attackers to
-        capture a user’s keystrokes directly inside a web browser.
-        Unlike traditional keyloggers, this method does not require the installation of software
-        on the victim’s device.
-    </p>
-
-    <p>
-        Instead, malicious JavaScript code is executed when a user visits a compromised website,
-        allowing attackers to silently record everything typed into a webpage.
-    </p>
-
-    <h3>
-        <i class="fa-solid fa-code icon"></i>
-        How JavaScript‑Based Keylogging Works
-    </h3>
-
-    <p>
-        JavaScript‑based keylogging relies on scripts embedded within a webpage.
-        These scripts monitor keyboard events such as key presses and releases.
-        When a user types into a form, search box, or login field, their input can be captured instantly.
-    </p>
-
+    <!-- How It Works -->
+    <h3><i class="fa-solid fa-code icon"></i> How JavaScript‑Based Keylogging Works</h3>
+    <p>JavaScript‑based keylogging relies on scripts embedded within a webpage. These scripts monitor keyboard events such as key presses and releases. When a user types into a form, search box, or login field, their input can be captured instantly.</p>
     <ul>
-        <li><i class="fa-solid fa-globe icon"></i> A user visits a compromised or malicious website</li>
-        <li><i class="fa-solid fa-code icon"></i> Malicious JavaScript loads automatically in the browser</li>
-        <li><i class="fa-solid fa-keyboard icon"></i> Keystrokes entered into the webpage are recorded</li>
-        <li><i class="fa-solid fa-paper-plane icon"></i> Captured data is sent to the attacker</li>
+      <li><i class="fa-solid fa-globe icon"></i> A user visits a compromised or malicious website</li>
+      <li><i class="fa-solid fa-code icon"></i> Malicious JavaScript loads automatically in the browser</li>
+      <li><i class="fa-solid fa-keyboard icon"></i> Keystrokes entered into the webpage are recorded</li>
+      <li><i class="fa-solid fa-paper-plane icon"></i> Captured data is sent to the attacker</li>
     </ul>
 
-    <h3>
-        <i class="fa-solid fa-shield-halved icon"></i>
-        Why JavaScript‑Based Keylogging Is Dangerous
-    </h3>
+    <!-- Why Dangerous -->
+    <h3><i class="fa-solid fa-shield-halved icon"></i> Why JavaScript‑Based Keylogging Is Dangerous</h3>
+    <p>This type of keylogging is especially dangerous because it bypasses many traditional security measures. Since no malicious files are downloaded or installed, antivirus software may not detect any suspicious activity.</p>
 
-    <p>
-        This type of keylogging is especially dangerous because it bypasses many traditional
-        security measures. Since no malicious files are downloaded or installed, antivirus
-        software may not detect any suspicious activity.
-    </p>
+    <!-- Visibility -->
+    <h3><i class="fa-solid fa-eye-slash icon"></i> Visibility to the Victim</h3>
+    <p>Victims are usually unaware that keylogging is taking place. Pages often look legitimate and may contain copied content from trusted websites. No pop‑ups, warnings, or error messages appear during the attack.</p>
 
-    <h3>
-        <i class="fa-solid fa-eye-slash icon"></i>
-        Visibility to the Victim
-    </h3>
+    <!-- Larger Attack Role -->
+    <h3><i class="fa-solid fa-network-wired icon"></i> Role of JavaScript Keylogging in Larger Attacks</h3>
+    <p>JavaScript‑based keylogging is often part of a <span class="highlight">multi‑stage attack</span>. The information collected can be used to identify valuable targets, gain login credentials, or support later phases such as espionage or deeper system compromise.</p>
 
-    <p>
-        Victims are usually unaware that keylogging is taking place.
-        Pages often look legitimate and may contain copied content from trusted websites.
-        No pop‑ups, warnings, or error messages appear during the attack.
-    </p>
+    <!-- Key Learning Outcome -->
+    <h3><i class="fa-solid fa-graduation-cap icon"></i> Key Learning Outcome</h3>
+    <p>Learners should understand that JavaScript‑based keylogging exploits trusted web technologies. Recognizing that browsers can be used as attack platforms highlights the importance of safe browsing habits, website verification, and modern web‑focused security measures.</p>
 
-    <h3>
-        <i class="fa-solid fa-network-wired icon"></i>
-        Role of JavaScript Keylogging in Larger Attacks
-    </h3>
-
-    <p>
-        JavaScript‑based keylogging is often part of a <span class="highlight">multi‑stage attack</span>.
-        The information collected can be used to identify valuable targets, gain login credentials,
-        or support later phases such as espionage or deeper system compromise.
-    </p>
-
-    <h3>
-        <i class="fa-solid fa-graduation-cap icon"></i>
-        Key Learning Outcome
-    </h3>
-
-    <p>
-        Learners should understand that JavaScript‑based keylogging exploits trusted web technologies.
-        Recognizing that browsers can be used as attack platforms highlights the importance of safe
-        browsing habits, website verification, and modern web‑focused security measures.
-    </p>
-
-    <!-- ✅ NEXT LESSON BUTTON -->
+    <!-- Next Lesson Button -->
     <div class="next-lesson">
-        <a href="lesson3o4.html">
-            Next Lesson <i class="fa-solid fa-arrow-right"></i>
-        </a>
+      <a href="lesson3o4.html">Next Lesson <i class="fa-solid fa-arrow-right"></i></a>
     </div>
-
-</div>
-
+  </div>
 </body>
 </html>
