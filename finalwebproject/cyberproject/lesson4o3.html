@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Defense and Prevention</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+        }
+
+        /* Background image */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("slide 4.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px) brightness(0.7);
+            transform: scale(1.1);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 60px 30px;
+        }
+
+        .content-box {
+            background: rgba(0, 0, 0, 0.65);
+            border-radius: 14px;
+            padding: 40px;
+        }
+
+        /* Centered logo */
+        .logo {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 50px;
+        }
+
+        h1, h2 {
+            color: #00c3ff;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            font-size: 1.6rem;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 1.05rem;
+            margin-top: 10px;
+        }
+
+        ul {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+
+        /* ✅ NEXT LESSON BUTTON */
+        .next-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 160px;
+            height: 60px;
+
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+
+            border-radius: 12px;
+            margin: 50px auto 0 auto;
+
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .next-btn i {
+            margin-left: 8px;
+        }
+
+        .next-btn:hover {
+            background-color: #3399ff;
+            transform: scale(1.05);
+        }
+
+        .button-wrapper {
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="content-box">
+
+        <img src="logo.jpeg" class="logo" alt="Organization Logo">
+
+        <h1>
+            <i class="fa-solid fa-shield"></i>
+            Defense and Prevention
+        </h1>
+
+        <p style="text-align: center; opacity: 0.9;">
+            Understanding how to reduce risk, detect threats early, and limit attack impact
+        </p>
+
+        <h2><i class="fa-solid fa-house-laptop icon"></i>Defensive Awareness for Individuals</h2>
+        <p>
+            Many large‑scale cyber attacks begin with poorly secured consumer devices.
+            Individuals play a critical role in preventing botnet growth by securing
+            their own systems and networks.
+        </p>
+        <ul>
+            <li>Change default passwords on routers and IoT devices</li>
+            <li>Update firmware and software regularly</li>
+            <li>Disable unused services and remote access features</li>
+            <li>Place IoT devices on separate or guest networks</li>
+        </ul>
+
+        <h2><i class="fa-solid fa-building icon"></i>Organizational Defense Strategies</h2>
+        <ul>
+            <li>Monitor unusual traffic spikes and network behavior</li>
+            <li>Use rate limiting and DDoS mitigation services</li>
+            <li>Detect lateral movement within internal networks</li>
+            <li>Log and analyze proxy and outbound traffic</li>
+        </ul>
+
+        <h2><i class="fa-solid fa-scale-balanced icon"></i>Ethical and Long‑Term Prevention</h2>
+        <ul>
+            <li>Security skills must be paired with ethical judgment</li>
+            <li>Automation does not remove accountability</li>
+            <li>Cyber actions can have physical consequences</li>
+        </ul>
+
+        <!-- ✅ CENTERED NEXT BUTTON -->
+        <div class="button-wrapper">
+            <a href="lesson4o4.html" class="next-btn">
+                Next Lesson <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
+``

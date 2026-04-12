@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cybersecurity News</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .news-container {
+      max-width: 900px;
+      margin: 20px auto;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: #38bdf8;
+    }
+
+    .card small {
+      display: block;
+      margin-bottom: 10px;
+      color: #94a3b8;
+    }
+
+    .card a {
+      color: #22c55e;
+      text-decoration: none;
+    }
+
+    .pagination {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      background: #38bdf8;
+      border: none;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background: #64748b;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Cybersecurity News</h1>
+
+  <div class="news-container" id="news"></div>
+
+  <div class="pagination">
+    <button id="prev">Previous</button>
+    <span id="pageInfo"></span>
+    <button id="next">Next</button>
+  </div>
+
+  <script>
+    const RSS_PROXY = "https://api.rss2json.com/v1/api.json?rss_url=";
+
+    const feeds = [
+      {
+        name: "Krebs on Security",
+        url: "https://krebsonsecurity.com/feed/"
+      },
+      {
+        name: "Threatpost",
+        url: "https://threatpost.com/feed/"
+      }
+    ];
+
+    const newsContainer = document.getElementById('news');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const pageInfo = document.getElementById('pageInfo');
+
+    let allNews = [];
+    let currentPage = 1;
+    const itemsPerPage = 5;
+
+    async function fetchFeeds() {
+      try {
+        const requests = feeds.map(feed =>
+          fetch(RSS_PROXY + encodeURIComponent(feed.url))
+            .then(res => res.json())
+            .then(data => {
+              return (data.items || []).map(item => ({
+                title: item.title,
+                link: item.link,
+                pubDate: new Date(item.pubDate),
+                source: feed.name
+              }));
+            })
+        );
+
+        const results = await Promise.all(requests);
+
+        // Merge + sort by newest
+        allNews = results.flat().sort((a, b) => b.pubDate - a.pubDate);
+
+        renderPage();
+      } catch (error) {
+        newsContainer.innerHTML = '<p>Error loading news.</p>';
+        console.error(error);
+      }
+    }
+
+    function renderPage() {
+      newsContainer.innerHTML = '';
+
+      const start = (currentPage - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const pageItems = allNews.slice(start, end);
+
+      pageItems.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        card.innerHTML = `
+          <h3>${item.title}</h3>
+          <small>${item.source} • ${item.pubDate.toLocaleString()}</small>
+          <a href="${item.link}" target="_blank">Read more</a>
+        `;
+
+        newsContainer.appendChild(card);
+      });
+
+      const totalPages = Math.max(1, Math.ceil(allNews.length / itemsPerPage));
+      pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+
+      prevBtn.disabled = currentPage === 1;
+      nextBtn.disabled = currentPage === totalPages;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderPage();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      const totalPages = Math.ceil(allNews.length / itemsPerPage);
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderPage();
+      }
+    });
+
+    fetchFeeds();
+  </script>
+
+</body>
+</html>

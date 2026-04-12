@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Understanding Watering Hole Attacks</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        /* Background image */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("slide 3.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px) brightness(0.7);
+            transform: scale(1.1);
+            z-index: -1;
+        }
+
+        /* Lesson container */
+        .lesson-container {
+            max-width: 950px;
+            margin: 70px auto;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.65);
+            border-radius: 15px;
+        }
+
+        /* ✅ Centered logo */
+        .logo {
+            display: block;
+            margin: 0 auto 25px auto;
+            width: 50px;
+        }
+
+        h1, h2, h3 {
+            color: #00c3ff;
+            text-align: center;
+        }
+
+        .icon {
+            color: #00c3ff;
+            margin-right: 8px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            color: #00c3ff;
+            font-weight: bold;
+        }
+
+        /* ✅ Next Lesson Button */
+        .next-lesson {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .next-lesson a {
+            text-decoration: none;
+            background-color: #00c3ff;
+            color: #000;
+            padding: 14px 34px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .next-lesson a:hover {
+            background-color: #009ecf;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="lesson-container">
+
+    <!-- ✅ LOGO (CENTERED, NOTHING ELSE CHANGED) -->
+    <img src="logo.jpeg" class="logo" alt="Organization Logo">
+
+    <h1>
+        <i class="fa-solid fa-droplet icon"></i>
+        Lesson 1: Understanding Watering Hole Attacks
+    </h1>
+
+    <h2>
+        <i class="fa-solid fa-circle-info icon"></i>
+        Introduction
+    </h2>
+
+    <p>
+        A <span class="highlight">watering hole attack</span> is a cyber‑attack technique where attackers
+        compromise websites that are frequently visited by a specific group of users.
+        Instead of attacking victims directly, attackers wait for users to visit these trusted sites.
+    </p>
+
+    <p>
+        Just as predators wait at a watering hole for animals, cyber attackers wait patiently
+        for victims to arrive at compromised websites, allowing malicious code to run silently
+        in the background.
+    </p>
+
+    <h3>
+        <i class="fa-solid fa-diagram-project icon"></i>
+        How Watering Hole Attacks Work
+    </h3>
+
+    <p>
+        Watering hole attacks typically follow these steps:
+    </p>
+
+    <ul>
+        <li>
+            <i class="fa-solid fa-magnifying-glass icon"></i>
+            Attackers identify websites frequently visited by a target group
+        </li>
+        <li>
+            <i class="fa-solid fa-code icon"></i>
+            Malicious code is injected into the website
+        </li>
+        <li>
+            <i class="fa-solid fa-browser icon"></i>
+            Users unknowingly visit the compromised site
+        </li>
+        <li>
+            <i class="fa-solid fa-skull-crossbones icon"></i>
+            Malicious scripts execute inside the browser
+        </li>
+    </ul>
+
+    <h3>
+        <i class="fa-solid fa-user-shield icon"></i>
+        Why Watering Hole Attacks Are Effective
+    </h3>
+
+    <p>
+        These attacks are effective because victims trust the websites they are visiting.
+        Since no files are downloaded or installed, traditional antivirus tools may not
+        detect any suspicious activity.
+    </p>
+
+    <p>
+        Watering hole attacks are often used in <span class="highlight">cyber espionage</span>,
+        where long‑term monitoring and intelligence gathering are more important than immediate damage.
+    </p>
+
+    <h3>
+        <i class="fa-solid fa-scale-balanced icon"></i>
+        Watering Hole Attacks vs Traditional Attacks
+    </h3>
+
+    <p>
+        Unlike phishing attacks that rely on suspicious emails and user interaction,
+        watering hole attacks exploit trusted browsing behaviour.
+        Users do not need to click on dangerous attachments—simply visiting a familiar site
+        is enough to trigger the attack.
+    </p>
+
+    <h3>
+        <i class="fa-solid fa-graduation-cap icon"></i>
+        Key Learning Outcome
+    </h3>
+
+    <p>
+        Understanding watering hole attack concepts helps learners recognize the risks
+        associated with trusted websites, highlights the importance of browser security,
+        and explains why attackers increasingly focus on subtle, browser‑based techniques.
+    </p>
+
+    <!-- ✅ NEXT LESSON BUTTON (END OF LESSON) -->
+    <div class="next-lesson">
+        <a href="lesson3o2.html">
+            Next Lesson <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

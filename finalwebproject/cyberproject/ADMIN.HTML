@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cyber Shield | Admin Dashboard</title>
+<style>
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: url("bjjimage.png") center / cover no-repeat fixed;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    color: #7d47ff;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(10,10,25,0.8);
+    border-radius: 12px;
+    overflow: hidden;
+}
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    text-align: left;
+}
+th {
+    background: #1a1a3d;
+    color: #a78bff;
+}
+button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #7d47ff, #5b2bff);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+button:hover {
+    transform: translateY(-1px);
+}
+#lesson-btn {
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<h1>Admin Dashboard</h1>
+<p>Manage registered users below:</p>
+
+<table id="user-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<!-- Button to go to Lesson Upload Page -->
+<div id="lesson-btn">
+    <button onclick="goToLessons()">Upload Lesson Page for Learners</button>
+</div>
+
+<script>
+let users = JSON.parse(localStorage.getItem("cs_users")) || [];
+
+function renderUsers() {
+    const tbody = document.querySelector("#user-table tbody");
+    tbody.innerHTML = "";
+    users.forEach((u, i) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${u.name}</td>
+            <td>${u.email}</td>
+            <td>${u.createdAt}</td>
+            <td>
+                <button onclick="deleteUser(${i})">Delete</button>
+            </td>
+        `;
+        tbody.appendChild(row);
+    });
+}
+
+function deleteUser(index) {
+    if (confirm("Are you sure you want to delete this user?")) {
+        users.splice(index, 1);
+        localStorage.setItem("cs_users", JSON.stringify(users));
+        renderUsers();
+    }
+}
+
+function goToLessons() {
+    // Redirect to your lesson upload page for learners
+    window.location.href = "uploadedlesson.html"; 
+}
+
+renderUsers();
+</script>
+
+</body>
+</html>

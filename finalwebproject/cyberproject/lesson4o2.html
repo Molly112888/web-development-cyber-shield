@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Botnet Infrastructure</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+        }
+
+        /* Background image */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("slide 4.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px) brightness(0.7);
+            transform: scale(1.1);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 60px 30px;
+        }
+
+        .content-box {
+            background: rgba(0, 0, 0, 0.65);
+            border-radius: 14px;
+            padding: 40px;
+        }
+
+        /* ✅ CENTERED LOGO */
+        .logo {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 50px;
+        }
+
+        h1, h2 {
+            color: #00c3ff;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            font-size: 1.6rem;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 1.05rem;
+            margin-top: 10px;
+        }
+
+        ul {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+
+        .next-lesson {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .next-lesson a {
+            background: #00c3ff;
+            color: #000;
+            text-decoration: none;
+            padding: 16px 36px;
+            font-size: 1.15rem;
+            border-radius: 40px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .next-lesson a:hover {
+            background: #5ad9ff;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="content-box">
+
+        <!-- ✅ CENTERED LOGO -->
+        <img src="logo.jpeg" class="logo" alt="Organization Logo">
+
+        <h1>
+            <i class="fa-solid fa-diagram-project icon"></i>
+            Botnet Infrastructure
+        </h1>
+
+        <p style="text-align: center; opacity: 0.9;">
+            Understanding how botnets are structured, controlled, and scaled
+        </p>
+
+        <h2>
+            <i class="fa-solid fa-network-wired icon"></i>
+            What Is Botnet Infrastructure?
+        </h2>
+        <p>
+            Botnet infrastructure refers to the technical framework that allows attackers
+            to control large numbers of compromised devices at the same time. This structure
+            enables coordination, persistence, and the execution of multiple attack types
+            using a single distributed system.
+        </p>
+
+        <h2>
+            <i class="fa-solid fa-server icon"></i>
+            Command and Control (C2)
+        </h2>
+        <p>
+            Command‑and‑control systems are responsible for issuing instructions to infected
+            devices. Through C2, attackers can start or stop attacks, update malware, or
+            redirect the botnet toward new targets.
+        </p>
+        <ul>
+            <li>Centralized C2 servers controlling all bots</li>
+            <li>Decentralized or peer‑to‑peer botnet designs</li>
+            <li>Encrypted communication to evade detection</li>
+        </ul>
+
+        <h2>
+            <i class="fa-solid fa-microchip icon"></i>
+            Bots (Infected Devices)
+        </h2>
+        <p>
+            Bots are compromised machines that perform actions on behalf of the attacker.
+            Modern botnets often rely on consumer and IoT devices due to weak security and
+            limited monitoring.
+        </p>
+        <ul>
+            <li>Home routers and IoT devices</li>
+            <li>Smart TVs, cameras, and digital appliances</li>
+            <li>Poorly maintained or outdated systems</li>
+        </ul>
+
+        <h2>
+            <i class="fa-solid fa-arrows-rotate icon"></i>
+            Communication Channels
+        </h2>
+        <p>
+            Bots must regularly receive instructions from the attacker. This communication
+            is often disguised to blend into normal network traffic.
+        </p>
+        <ul>
+            <li>Web traffic using HTTP or HTTPS</li>
+            <li>DNS‑based signaling</li>
+            <li>Proxy networks and encrypted tunnels</li>
+        </ul>
+
+        <h2>
+            <i class="fa-solid fa-shield-halved icon"></i>
+            Why Infrastructure Matters for Defense
+        </h2>
+        <p>
+            Understanding botnet infrastructure helps defenders identify threats early.
+            Disrupting command channels, isolating infected devices, or reducing internal
+            trust can significantly limit botnet effectiveness.
+        </p>
+
+        <div class="next-lesson">
+            <a href="lesson4o3.html">
+                <i class="fa-solid fa-arrow-right"></i> Next Lesson
+            </a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

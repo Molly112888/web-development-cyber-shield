@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IoT Exploitation & Proxy Abuse</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+        }
+
+        /* Background image */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("slide 4.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px) brightness(0.7);
+            transform: scale(1.1);
+            z-index: -1;
+        }
+			
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 60px 30px;
+        }
+
+        .content-box {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 14px;
+            padding: 40px;
+        }
+
+        /* Centered logo */
+        .logo {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 50px;
+        }
+
+        /* Blue headings */
+        .content-box h1,
+        .content-box h2 {
+            color: #00c3ff;
+        }
+
+        .content-box h1 {
+            text-align: center;
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+        }
+
+        .content-box h2 {
+            margin-top: 35px;
+            font-size: 1.6rem;
+        }
+
+        .content-box p {
+            line-height: 1.7;
+            font-size: 1.05rem;
+            margin-top: 10px;
+        }
+
+        .content-box ul {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .content-box li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* Quiz button */
+        .quiz-btn {
+            display: block;
+            margin: 40px auto 0 auto;
+            padding: 14px 28px;
+            background-color: #00c3ff;
+            color: #000;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .quiz-btn:hover {
+            background-color: #0099cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-box">
+		  <img src="logo.jpeg" class="logo" alt="Organization Logo">
+            <h1>IoT Exploitation & Proxy Abuse</h1>
+
+            <h2>Understanding IoT Exploitation</h2>
+            <p>
+                Internet of Things (IoT) devices — such as smart TVs, routers, and digital assistants — often have weak security settings. 
+                Attackers exploit these vulnerabilities to gain unauthorized access, install malware, or recruit devices into botnets.
+            </p>
+            <ul>
+                <li>Default or weak passwords make devices easy targets.</li>
+                <li>Unpatched firmware can expose critical flaws.</li>
+                <li>Compromised IoT devices can be weaponized for DDoS attacks.</li>
+            </ul>
+
+            <h2>Proxy Abuse in Cybercrime</h2>
+            <p>
+                Proxy networks allow attackers to mask their identity by routing traffic through unsuspecting users’ devices. 
+                When IoT devices are exploited, they can be turned into proxy endpoints, enabling large-scale abuse.
+            </p>
+            <ul>
+                <li>Residential proxies are hijacked to bypass security filters.</li>
+                <li>Attackers use proxies for credential stuffing and account takeovers.</li>
+                <li>Proxy abuse makes tracing cybercriminals significantly harder.</li>
+            </ul>
+
+            <h2>Defensive Measures</h2>
+            <p>
+                Protecting against IoT exploitation and proxy abuse requires proactive steps:
+            </p>
+            <ul>
+                <li>Change default passwords and use strong authentication.</li>
+                <li>Regularly update device firmware and software.</li>
+                <li>Monitor unusual network traffic for signs of proxy abuse.</li>
+                <li>Use firewalls and intrusion detection systems to block malicious activity.</li>
+            </ul>
+
+            <!-- Quiz Button -->
+            <a href="lesson4o5.html" class="quiz-btn">Take Quiz</a>
+        </div>
+    </div>
+</body>
+</html>

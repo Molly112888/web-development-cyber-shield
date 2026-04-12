@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Shield</title>
+
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: url("bjjimage.png") center/cover no-repeat;
+            font-family: Arial, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #4169E1;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li {
+            margin-right: 10px;
+        }
+
+        ul li a {
+            display: block;
+            color: white;
+            padding: 12px 18px;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        ul li a:hover {
+            background-color: #2e4faf;
+        }
+
+        /* HOME BUTTON (PURPLE) */
+        .home-btn {
+            background-color: purple;
+        }
+
+        .home-btn:hover {
+            background-color: #5e0080;
+        }
+
+        /* RIGHT SIDE LOGIN BUTTON */
+        .right {
+            margin-left: auto;
+        }
+
+        .right a {
+            background-color: purple;
+        }
+
+        .right a:hover {
+            background-color: #5e0080;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            text-shadow: 2px 2px 6px black;
+        }
+
+        header h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        .start-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 30px;
+            background: purple;
+            color: white;
+            font-size: 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 0 10px black;
+        }
+
+        .start-btn:hover {
+            background: #5e0080;
+            transform: scale(1.05);
+        }
+
+        .slideshow-container {
+            max-width: 90%;
+            margin: 20px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 15px black;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            animation: fade 1.5s;
+        }
+
+        @keyframes fade {
+            from { opacity: .4; }
+            to { opacity: 1; }
+        }
+
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 4px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .active {
+            background-color: purple;
+        }
+
+        #learn {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            margin: 20px;
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 0 15px black;
+        }
+
+        #learn h2 {
+            text-align: center;
+            font-size: 35px;
+        }
+
+        #learn p {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .topic-card {
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px black;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<ul>
+    <li><img src="logo.jpeg" height="50" width="50"></li>
+    <li><a href="#" class="home-btn">Home</a></li>
+    <li><a href="api.html">News</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li class="right"><a href="log.html">Sign in / Login</a></li>
+</ul>
+
+<!-- HEADER -->
+<header>
+    <h1>Cyber Shield</h1>
+    <p><i>Protecting Your Digital World with Smart and Secure Solutions!!</i></p>
+    <a href="mainintro.html" class="start-btn">Start Course</a>
+</header>
+
+<!-- SLIDESHOW -->
+<div class="slideshow-container">
+    <img class="slide" src="slide 1.png">
+    <img class="slide" src="slide 2.png">
+    <img class="slide" src="slide 3.png">
+    <img class="slide" src="slide 4.png">
+</div>
+
+<div class="dots">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+
+<!-- LEARN SECTION -->
+<section id="learn">
+    <h2>Learn About Cyber Security</h2>
+    <p>Explore the most important topics to protect your digital world.</p>
+
+    <div class="topic-grid">
+        <div class="topic-card" style="background:#4169E1;">
+            <h3>Phishing</h3>
+            <p>Fake emails and websites that steal personal information.</p>
+        </div>
+
+        <div class="topic-card" style="background:#5A5AFF;">
+            <h3>Trojans</h3>
+            <p>Malware disguised as trusted software.</p>
+        </div>
+
+        <div class="topic-card" style="background:#4B0099;">
+            <h3>Keyloggers</h3>
+            <p>Secretly track everything you type.</p>
+        </div>
+
+        <div class="topic-card" style="background:#3333CC;">
+            <h3>Ransomware</h3>
+            <p>Locks your files and demands payment.</p>
+        </div>
+
+        <div class="topic-card" style="background:#6600CC;">
+            <h3>Social Engineering</h3>
+            <p>Psychological tricks used by attackers.</p>
+        </div>
+
+        <div class="topic-card" style="background:#330099;">
+            <h3>Malware</h3>
+            <p>Viruses, spyware, worms, and more.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SCRIPT -->
+<script>
+let slideIndex = 0;
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) slideIndex = 1;
+
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = "dot";
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+
+    setTimeout(showSlides, 4000);
+}
+
+showSlides();
+</script>
+
+</body>
+</html>
