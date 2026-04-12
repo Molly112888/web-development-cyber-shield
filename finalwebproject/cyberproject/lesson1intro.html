@@ -1,156 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Cybercrime Background</title>
-
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #ffffff;
-        }
-
-        /* Blurred background image */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("slide 1.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            filter: blur(5px) brightness(0.7);
-            transform: scale(1.1);
-            z-index: -1;
-        }
-
-        /* Logo image */
-        .logo {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            width: 120px;
-            height: auto;
-            z-index: 10;
-        }
-
-        /* Main content container */
-        .content {
-            max-width: 900px;
-            margin: 120px auto 40px auto;
-            background: rgba(0, 0, 0, 0.65);
-            padding: 40px;
-            border-radius: 10px;
-        }
-
-        h1, h2 {
-            margin-top: 0;
-        }
-
-        p, ul {
-            line-height: 1.6;
-            font-size: 16px;
-        }
-
-        /* ✅ PURPLE HIGHLIGHT (REPLACED YELLOW) */
-        .highlight {
-            color: purple;
-            font-weight: bold;
-        }
-
-        /* ✅ PURPLE BUTTON (REPLACED YELLOW) */
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 22px;
-            background-color: purple;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-
-        .btn:hover {
-            background-color: #5e0080; /* darker purple */
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Cybercrime Background</title>
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("slide 1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px) brightness(0.7);
+    transform: scale(1.1);
+    z-index: -1;
+}
+.logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 120px;
+    height: auto;
+    z-index: 10;
+}
+.content {
+    max-width: 900px;
+    margin: 120px auto 40px auto;
+    background: rgba(0, 0, 0, 0.65);
+    padding: 40px;
+    border-radius: 10px;
+}
+h1, h2 {
+    margin-top: 0;
+}
+p, ul {
+    line-height: 1.6;
+    font-size: 16px;
+}
+.highlight {
+    color: purple;
+    font-weight: bold;
+}
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    background-color: purple;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: #5e0080;
+}
+</style>
 </head>
-
 <body>
-
-    <!-- Logo -->
-    <img src="logo.jpeg" class="logo" alt="Organization Logo">
-
-    <!-- Introductory Content -->
-    <div class="content">
-        <h1>Cyber Attacks &amp; Ransomware Awareness</h1>
-
-        <p>
-            Cybercrime is one of the fastest‑growing threats in the digital world.
-            Every year, organizations, governments, and individuals fall victim to
-            <span class="highlight">ransomware attacks, data breaches, and cyber extortion</span>.
-        </p>
-
-        <p>
-            This website is designed to help learners understand how modern cyber attacks
-            work, why ransomware is so dangerous, and how cybercriminal groups operate
-            behind the scenes.
-        </p>
-
-        <h2>What Is Ransomware?</h2>
-        <p>
-            Ransomware is a type of malicious software that locks or encrypts computer
-            systems and demands payment—usually in cryptocurrency—to restore access.
-            In many cases, attackers also steal sensitive data and threaten to publish it.
-        </p>
-
-        <h2>Modern Cyber Attack Techniques</h2>
-        <ul>
-            <li>Ransomware and double extortion attacks</li>
-            <li>Credential theft and unauthorized system access</li>
-            <li>Data exfiltration and data leaks</li>
-            <li>Supply‑chain attacks affecting multiple organizations</li>
-            <li>Cryptocurrency‑based extortion and laundering</li>
-        </ul>
-
-        <h2>Why These Lessons Matter</h2>
-        <p>
-            Real‑world ransomware attacks have caused
-            <span class="highlight">millions of euros in economic damage</span>,
-            disrupted essential services, and exposed sensitive personal and business data.
-            Understanding how these attacks happen is the first step toward prevention.
-        </p>
-
-        <p>
-            Throughout this lesson series, real investigations are used only as
-            <strong>examples</strong> to explain attack methods, criminal strategies,
-            and law‑enforcement responses—not to focus on individuals.
-        </p>
-
-        <h2>What You Will Learn</h2>
-        <ul>
-            <li>How ransomware attacks begin and spread</li>
-            <li>What “double extortion” means</li>
-            <li>How cybercriminal groups organize themselves</li>
-            <li>The role of cryptocurrency in cybercrime</li>
-            <li>How attacks are investigated and disrupted</li>
-            <li>How individuals and organizations can reduce risk</li>
-        </ul>
-
-        <p>
-            This content is provided for educational and awareness purposes only
-            and promotes safe, responsible use of technology.
-        </p>
-
-</body>
-
-        <a href="lesson1o1.html" class="btn">Start Learning</a>
-    </div>
-
+<img src="logo.jpeg" class="logo" alt="Organization Logo">
+<div class="content">
+    <h1>Cyber Attacks &amp; Ransomware Awareness</h1>
+    <p>Cybercrime is one of the fastest‑growing threats in the digital world. Every year, organizations, governments, and individuals fall victim to <span class="highlight">ransomware attacks, data breaches, and cyber extortion</span>.</p>
+    <p>This website is designed to help learners understand how modern cyber attacks work, why ransomware is so dangerous, and how cybercriminal groups operate behind the scenes.</p>
+    <h2>What Is Ransomware?</h2>
+    <p>Ransomware is a type of malicious software that locks or encrypts computer systems and demands payment—usually in cryptocurrency—to restore access. In many cases, attackers also steal sensitive data and threaten to publish it.</p>
+    <h2>Modern Cyber Attack Techniques</h2>
+    <ul>
+        <li>Ransomware and double extortion attacks</li>
+        <li>Credential theft and unauthorized system access</li>
+        <li>Data exfiltration and data leaks</li>
+        <li>Supply‑chain attacks affecting multiple organizations</li>
+        <li>Cryptocurrency‑based extortion and laundering</li>
+    </ul>
+    <h2>Why These Lessons Matter</h2>
+    <p>Real‑world ransomware attacks have caused <span class="highlight">millions of euros in economic damage</span>, disrupted essential services, and exposed sensitive personal and business data. Understanding how these attacks happen is the first step toward prevention.</p>
+    <p>Throughout this lesson series, real investigations are used only as <strong>examples</strong> to explain attack methods, criminal strategies, and law‑enforcement responses—not to focus on individuals.</p>
+    <h2>What You Will Learn</h2>
+    <ul>
+        <li>How ransomware attacks begin and spread</li>
+        <li>What “double extortion” means</li>
+        <li>How cybercriminal groups organize themselves</li>
+        <li>The role of cryptocurrency in cybercrime</li>
+        <li>How attacks are investigated and disrupted</li>
+        <li>How individuals and organizations can reduce risk</li>
+    </ul>
+    <p>This content is provided for educational and awareness purposes only and promotes safe, responsible use of technology.</p>
+    <a href="lesson1o1.html" class="btn">Start Learning</a>
+</div>
 </body>
 </html>
