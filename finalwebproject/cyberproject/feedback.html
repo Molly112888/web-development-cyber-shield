@@ -1,141 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback | CyberShield</title>
-
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        /* Blurred background image */
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background-image: url("bjjimage.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            filter: blur(6px) brightness(0.7);
-            transform: scale(1.1);
-            z-index: -1;
-        }
-
-        /* Light purple container */
-        .container {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 40px;
-            background: rgba(237, 233, 254, 0.96);
-            border-radius: 16px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
-        }
-
-        /* Blue headings */
-        h1, h2 {
-            color: #2563eb;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #4b5563;
-            font-size: 16px;
-            margin-bottom: 30px;
-        }
-
-        p, label {
-            color: #1f2937;
-            line-height: 1.7;
-        }
-
-        h2 {
-            margin-top: 35px;
-            border-left: 4px solid #2563eb;
-            padding-left: 10px;
-        }
-
-        /* Form styling */
-        form {
-            margin-top: 25px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #c7d2fe;
-            font-size: 15px;
-            font-family: inherit;
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        input:focus, textarea:focus, select:focus {
-            outline: none;
-            border-color: #2563eb;
-        }
-
-        button {
-            background-color: #2563eb;
-            color: #ffffff;
-            padding: 12px 25px;
-            font-size: 16px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #1e40af;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 14px;
-            color: #4b5563;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback</title>
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("bjjimage.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px) brightness(0.7);
+    transform: scale(1.1);
+    z-index: -1;
+}
+.container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(237, 233, 254, 0.96);
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+h1, h2 {
+    color: #2563eb;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.subtitle {
+    text-align: center;
+    color: #4b5563;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+p, label {
+    color: #1f2937;
+    line-height: 1.7;
+}
+h2 {
+    margin-top: 35px;
+    border-left: 4px solid #2563eb;
+    padding-left: 10px;
+}
+form {
+    margin-top: 25px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #c7d2fe;
+    font-size: 15px;
+    font-family: inherit;
+}
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+button {
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #1e40af;
+}
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #4b5563;
+}
+</style>
 </head>
-
 <body>
- <img src="logo.jpeg" class="logo" alt="Organization Logo" width=50>
+<img src="logo.jpeg" class="logo" alt="Organization Logo" width="50">
 <div class="container">
-
     <h1>CyberShield Feedback</h1>
     <div class="subtitle">Help us improve our cybersecurity courses</div>
-
-    <p>
-        Your feedback helps us make CyberShield better.
-        Please share what you learned during the course and let us know
-        Where we can improve.
-    </p>
-
+    <p>Your feedback helps us make CyberShield better. Please share what you learned during the course and let us know where we can improve.</p>
     <h2>Feedback Form</h2>
-
     <form>
         <div class="form-group">
             <label for="name">Your Name (optional)</label>
             <input type="text" id="name" name="name" placeholder="Enter your name">
         </div>
-
         <div class="form-group">
             <label for="course">Which course did you complete?</label>
             <select id="course" name="course" required>
@@ -146,17 +116,14 @@
                 <option value="general">General Cybersecurity</option>
             </select>
         </div>
-
         <div class="form-group">
             <label for="learned">What did you learn from this course?</label>
             <textarea id="learned" name="learned" placeholder="Describe what you learned..." required></textarea>
         </div>
-
         <div class="form-group">
             <label for="improve">Where can we improve?</label>
             <textarea id="improve" name="improve" placeholder="Tell us what can be improved..." required></textarea>
         </div>
-
         <div class="form-group">
             <label for="rating">Overall course rating</label>
             <select id="rating" name="rating" required>
@@ -168,14 +135,9 @@
                 <option value="1">⭐ Poor</option>
             </select>
         </div>
-
         <button type="submit">Submit Feedback</button>
     </form>
-
-    <footer>
-        © 2026 CyberShield · Education for a safer internet
-    </footer>
+    <footer>© 2026 CyberShield · Education for a safer internet</footer>
 </div>
-
 </body>
 </html>
