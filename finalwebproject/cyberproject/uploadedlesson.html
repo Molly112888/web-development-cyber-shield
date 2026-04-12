@@ -1,174 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Cyber Shield | Upload Lessons</title>
-<style>
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: url("bjjimage.png") center / cover no-repeat fixed;
-    color: #f0f0ff;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-}
-.card {
-    width: 900px;
-    background: rgba(15,15,35,0.92);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    margin-top: 40px;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-    text-align: center;
-}
-header {
-    margin-bottom: 20px;
-}
-header img {
-    width: 120px;
-    border-radius: 50%;
-    box-shadow: 0 10px 30px rgba(125,71,255,0.7);
-}
-h1 {
-    color: #a78bff;
-    font-size: 34px;
-    margin-bottom: 10px;
-}
-h2 {
-    color: #35c6ff;
-    font-size: 26px;
-    margin-top: 30px;
-}
-p {
-    font-size: 16px;
-    color: #ccc;
-}
-form {
-    margin-top: 20px;
-    background: rgba(10,10,25,0.9);
-    padding: 20px;
-    border-radius: 12px;
-    text-align: left;
-}
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border: none;
-    background: #101025;
-    color: white;
-    font-size: 15px;
-}
-input:focus, textarea:focus { outline: 2px solid #7d47ff; }
-button {
-    padding: 10px 16px;
-    border: none;
-    border-radius: 6px;
-    background: linear-gradient(135deg, #7d47ff, #35c6ff);
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-button:hover { transform: translateY(-1px); box-shadow: 0 0 10px #35c6ff; }
-.lesson {
-    background: rgba(20,20,40,0.85);
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 12px;
-    text-align: left;
-}
-.lesson h3 { color: #a78bff; font-size: 20px; margin-bottom: 8px; }
-.lesson p { color: #e0e0ff; font-size: 15px; }
-.lesson small { color: #35c6ff; font-size: 13px; }
-.lesson:hover { box-shadow: 0 0 12px rgba(125,71,255,0.6); }
-.logout-btn {
-    margin-top: 20px;
-    padding: 10px 16px;
-    border: none;
-    border-radius: 6px;
-    background: linear-gradient(135deg, #7d47ff, #35c6ff);
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
-}
-.logout-btn:hover { box-shadow: 0 0 10px #7d47ff; }
-</style>
+  <meta charset="UTF-8">
+  <title>Cyber Shield | Upload Lessons</title>
+
+  <style>
+    /* Base layout */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: url("bjjimage.png") center / cover no-repeat fixed;
+      color: #f0f0ff;
+      margin: 0; padding: 0;
+      display: flex; justify-content: center; align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    /* Card container */
+    .card {
+      width: 900px;
+      background: rgba(15,15,35,0.92);
+      backdrop-filter: blur(10px);
+      padding: 30px; margin-top: 40px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    /* Header logo */
+    header { margin-bottom: 20px; }
+    header img {
+      width: 120px;
+      border-radius: 50%;
+      box-shadow: 0 10px 30px rgba(125,71,255,0.7);
+    }
+
+    /* Headings */
+    h1 { color: #a78bff; font-size: 34px; margin-bottom: 10px; }
+    h2 { color: #35c6ff; font-size: 26px; margin-top: 30px; }
+
+    /* Paragraphs */
+    p { font-size: 16px; color: #ccc; }
+
+    /* Upload form */
+    form {
+      margin-top: 20px;
+      background: rgba(10,10,25,0.9);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: left;
+    }
+    input, textarea {
+      width: 100%; padding: 12px; margin: 10px 0;
+      border-radius: 8px; border: none;
+      background: #101025; color: white; font-size: 15px;
+    }
+    input:focus, textarea:focus { outline: 2px solid #7d47ff; }
+
+    /* Buttons */
+    button {
+      padding: 10px 16px; border: none; border-radius: 6px;
+      background: linear-gradient(135deg, #7d47ff, #35c6ff);
+      color: white; font-size: 15px; cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    button:hover { transform: translateY(-1px); box-shadow: 0 0 10px #35c6ff; }
+
+    /* Lesson cards */
+    .lesson {
+      background: rgba(20,20,40,0.85);
+      padding: 15px; margin: 15px 0;
+      border-radius: 12px; text-align: left;
+    }
+    .lesson h3 { color: #a78bff; font-size: 20px; margin-bottom: 8px; }
+    .lesson p { color: #e0e0ff; font-size: 15px; }
+    .lesson small { color: #35c6ff; font-size: 13px; }
+    .lesson:hover { box-shadow: 0 0 12px rgba(125,71,255,0.6); }
+
+    /* Logout button */
+    .logout-btn {
+      margin-top: 20px; padding: 10px 16px;
+      border: none; border-radius: 6px;
+      background: linear-gradient(135deg, #7d47ff, #35c6ff);
+      color: white; font-size: 15px; cursor: pointer;
+    }
+    .logout-btn:hover { box-shadow: 0 0 10px #7d47ff; }
+  </style>
 </head>
+
 <body>
+  <div class="card">
+    <!-- Logo -->
+    <header><img src="logo.jpeg" alt="Organization Logo"></header>
 
-<div class="card">
-  <header>
-    <img src="logo.jpeg" alt="Organization Logo">
-  </header>
+    <!-- Page title -->
+    <h1>Upload Lesson Page (Admin)</h1>
+    <p>Admins can upload and manage lessons here. Learners will see them on <strong>uploadedpage.html</strong>.</p>
 
-  <h1>Upload Lesson Page (Admin)</h1>
-  <p>Admins can upload and manage lessons here. Learners will see them on <strong>uploadedpage.html</strong>.</p>
-
-  <form onsubmit="addLesson(event)">
+    <!-- Upload form -->
+    <form onsubmit="addLesson(event)">
       <input id="lesson-title" placeholder="Lesson Title" required>
       <textarea id="lesson-content" placeholder="Lesson Content" required></textarea>
       <button type="submit">Upload Lesson</button>
-  </form>
+    </form>
 
-  <h2>Uploaded Lessons</h2>
-  <div id="lesson-list"></div>
+    <!-- Uploaded lessons -->
+    <h2>Uploaded Lessons</h2>
+    <div id="lesson-list"></div>
 
-  <button class="logout-btn" onclick="logout()">Logout</button>
-</div>
+    <!-- Logout -->
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
 
-<script>
-let lessons = JSON.parse(localStorage.getItem("cs_lessons")) || [];
+  <script>
+    // Load lessons from localStorage
+    let lessons = JSON.parse(localStorage.getItem("cs_lessons")) || [];
 
-function addLesson(event) {
-    event.preventDefault();
-    const title = document.getElementById("lesson-title").value.trim();
-    const content = document.getElementById("lesson-content").value.trim();
-    if (!title || !content) { alert("Both fields are required"); return; }
-    lessons.push({ title, content, createdAt: new Date().toLocaleString() });
-    localStorage.setItem("cs_lessons", JSON.stringify(lessons));
-    renderLessons();
-    event.target.reset();
-}
+    // Add new lesson
+    function addLesson(event) {
+      event.preventDefault();
+      const title = document.getElementById("lesson-title").value.trim();
+      const content = document.getElementById("lesson-content").value.trim();
+      if (!title || !content) { alert("Both fields are required"); return; }
+      lessons.push({ title, content, createdAt: new Date().toLocaleString() });
+      localStorage.setItem("cs_lessons", JSON.stringify(lessons));
+      renderLessons();
+      event.target.reset();
+    }
 
-function deleteLesson(index) {
-    if (confirm("Delete this lesson?")) {
+    // Delete lesson
+    function deleteLesson(index) {
+      if (confirm("Delete this lesson?")) {
         lessons.splice(index, 1);
         localStorage.setItem("cs_lessons", JSON.stringify(lessons));
         renderLessons();
+      }
     }
-}
 
-function renderLessons() {
-    const container = document.getElementById("lesson-list");
-    container.innerHTML = "";
-    if (lessons.length === 0) {
+    // Render lessons list
+    function renderLessons() {
+      const container = document.getElementById("lesson-list");
+      container.innerHTML = "";
+      if (lessons.length === 0) {
         container.innerHTML = "<p>No lessons uploaded yet.</p>";
         return;
-    }
-    lessons.forEach((l, i) => {
+      }
+      lessons.forEach((l, i) => {
         const div = document.createElement("div");
         div.className = "lesson";
         div.innerHTML = `
-            <h3>${l.title}</h3>
-            <p>${l.content}</p>
-            <small>Uploaded at: ${l.createdAt}</small><br>
-            <button onclick="deleteLesson(${i})">Delete</button>
+          <h3>${l.title}</h3>
+          <p>${l.content}</p>
+          <small>Uploaded at: ${l.createdAt}</small><br>
+          <button onclick="deleteLesson(${i})">Delete</button>
         `;
         container.appendChild(div);
-    });
-}
-renderLessons();
+      });
+    }
+    renderLessons();
 
-function logout() {
-    window.location.href = "homepage.html";
-}
-</script>
-
+    // Logout redirect
+    function logout() { window.location.href = "homepage.html"; }
+  </script>
 </body>
 </html>
