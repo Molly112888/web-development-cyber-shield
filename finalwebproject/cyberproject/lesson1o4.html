@@ -5,158 +5,89 @@
     <title>Reducing Ransomware Risk – GandCrab Case Study</title>
 
     <!-- Font Awesome Icons -->
-    https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #f2f2f2;
-        }
+        html, body { height: 100%; margin: 0; font-family: Arial, Helvetica, sans-serif; color: #f2f2f2; }
 
+        /* Background image with blur + dark overlay */
         body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background-image: url("slide 1.png");
-            background-size: cover;
-            background-position: center;
-            filter: blur(5px) brightness(0.7);
-            transform: scale(1.1);
-            z-index: -1;
+            content: ""; position: fixed; inset: 0;
+            background: url("slide 1.png") center/cover no-repeat;
+            filter: blur(5px) brightness(0.7); transform: scale(1.1); z-index: -1;
         }
 
-        .lesson {
-            max-width: 900px;
-            margin: 40px auto;
-            background: rgba(0, 0, 0, 0.65);
-            padding: 30px;
-            border-radius: 12px;
-        }
+        /* Lesson container */
+        .lesson { max-width: 900px; margin: 40px auto; background: rgba(0,0,0,0.65); padding: 30px; border-radius: 12px; }
 
-        .logo {
-            display: block;
-            margin: 0 auto 15px;
-        }
+        /* Logo */
+        .logo { display: block; margin: 0 auto 15px; }
 
-        h1 {
-            text-align: center;
-            color: #4da6ff;
-        }
+        /* Headings */
+        h1 { text-align: center; color: #4da6ff; }
+        h2 { color: #4da6ff; margin-top: 30px; }
+        p { line-height: 1.8; }
 
-        h2 {
-            color: #4da6ff;
-            margin-top: 30px;
-        }
+        /* Icons */
+        .icon { color: #4da6ff; margin-right: 10px; }
 
-        p {
-            line-height: 1.8;
-        }
-
-        .icon {
-            color: #4da6ff;
-            margin-right: 10px;
-        }
-
+        /* Highlighted info boxes */
         .box {
-            background: rgba(77, 166, 255, 0.12);
-            border-left: 4px solid #4da6ff;
-            padding: 16px;
-            margin: 20px 0;
-            border-radius: 6px;
+            background: rgba(77,166,255,0.12); border-left: 4px solid #4da6ff;
+            padding: 16px; margin: 20px 0; border-radius: 6px;
         }
 
-        ul {
-            margin-left: 20px;
-        }
+        ul { margin-left: 20px; }
+        li { margin-bottom: 12px; }
+        li i { width: 22px; text-align: center; }
 
-        li {
-            margin-bottom: 12px;
-        }
-
-        li i {
-            width: 22px;
-            text-align: center;
-        }
-
-        /* ✅ BUTTON */
-        .btn-container {
-            text-align: center;
-            margin-top: 40px;
-        }
-
+        /* Lesson navigation button */
+        .btn-container { text-align: center; margin-top: 40px; }
         .lesson-btn {
-            display: inline-block;
-            padding: 12px 32px;
-            background-color: #4da6ff;
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 30px;
-            transition: 0.3s;
+            display: inline-block; padding: 12px 32px; background: #4da6ff; color: #000;
+            text-decoration: none; font-weight: bold; border-radius: 30px; transition: 0.3s;
         }
-
-        .lesson-btn:hover {
-            background-color: #3399ff;
-            color: #fff;
-        }
+        .lesson-btn:hover { background: #3399ff; color: #fff; }
     </style>
 </head>
 
 <body>
+    <div class="lesson">
+        <!-- Logo -->
+        <img src="logo.jpeg" class="logo" alt="Organization Logo" width="50">
 
-<div class="lesson">
+        <!-- Main Title -->
+        <h1><i class="fa-solid fa-shield-halved icon"></i> Reducing Ransomware Risk: Lessons from GandCrab</h1>
 
-    <!-- ✅ Centered Logo -->
-    <img src="logo.jpeg" class="logo" alt="Organization Logo" width="50">
+        <!-- Intro -->
+        <p>The GandCrab ransomware operation demonstrated how cybercriminals could scale attacks by exploiting common security weaknesses.</p>
 
-    <h1>
-        <i class="fa-solid fa-shield-halved icon"></i>
-        Reducing Ransomware Risk: Lessons from GandCrab
-    </h1>
+        <!-- Section: Individual Risk Reduction -->
+        <h2><i class="fa-solid fa-user-lock icon"></i> How Individuals Can Reduce Risk</h2>
+        <div class="box">
+            <ul>
+                <li><i class="fa-solid fa-key icon"></i>Strong, unique passwords</li>
+                <li><i class="fa-solid fa-fingerprint icon"></i>Multi‑factor authentication</li>
+                <li><i class="fa-solid fa-envelope-open-text icon"></i>Email awareness</li>
+                <li><i class="fa-solid fa-arrows-rotate icon"></i>System updates</li>
+                <li><i class="fa-solid fa-database icon"></i>Regular backups</li>
+            </ul>
+        </div>
 
-    <p>
-        The GandCrab ransomware operation demonstrated how cybercriminals could
-        scale attacks by exploiting common security weaknesses.
-    </p>
+        <!-- Section: Organizational Risk Reduction -->
+        <h2><i class="fa-solid fa-building-shield icon"></i> How Organizations Can Reduce Risk</h2>
+        <div class="box">
+            <ul>
+                <li><i class="fa-solid fa-user-shield icon"></i>Least‑privilege access</li>
+                <li><i class="fa-solid fa-network-wired icon"></i>Network segmentation</li>
+                <li><i class="fa-solid fa-eye icon"></i>Monitoring systems</li>
+                <li><i class="fa-solid fa-lock icon"></i>Securing remote access</li>
+                <li><i class="fa-solid fa-clipboard-list icon"></i>Incident response plans</li>
+            </ul>
+        </div>
 
-    <h2>
-        <i class="fa-solid fa-user-lock icon"></i>
-        How Individuals Can Reduce Risk
-    </h2>
-
-    <div class="box">
-        <ul>
-            <li><i class="fa-solid fa-key icon"></i>Strong, unique passwords</li>
-            <li><i class="fa-solid fa-fingerprint icon"></i>Multi‑factor authentication</li>
-            <li><i class="fa-solid fa-envelope-open-text icon"></i>Email awareness</li>
-            <li><i class="fa-solid fa-arrows-rotate icon"></i>System updates</li>
-            <li><i class="fa-solid fa-database icon"></i>Regular backups</li>
-        </ul>
+        <!-- Next Lesson Button -->
+        <div class="btn-container"><a href="lesson1o5.html" class="lesson-btn">Next Lesson →</a></div>
     </div>
-
-    <h2>
-        <i class="fa-solid fa-building-shield icon"></i>
-        How Organizations Can Reduce Risk
-    </h2>
-
-    <div class="box">
-        <ul>
-            <li><i class="fa-solid fa-user-shield icon"></i>Least‑privilege access</li>
-            <li><i class="fa-solid fa-network-wired icon"></i>Network segmentation</li>
-            <li><i class="fa-solid fa-eye icon"></i>Monitoring systems</li>
-            <li><i class="fa-solid fa-lock icon"></i>Securing remote access</li>
-            <li><i class="fa-solid fa-clipboard-list icon"></i>Incident response plans</li>
-        </ul>
-    </div>
-
-    <!-- ✅ WORKING BUTTON (INSIDE LESSON) -->
-    <div class="btn-container">
-        <a href="lesson1o5.html" class="lesson-btn">Next Lesson →</a>
-    </div>
-
-</div>
-
 </body>
 </html>
