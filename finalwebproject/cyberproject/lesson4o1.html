@@ -1,41 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>DDoS and Email Flooding Attacks</title>
+    <meta charset="UTF-8"><title>DDoS and Email Flooding Attacks</title>
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         html, body {
-            height: 100%;
-            margin: 0;
+            height: 100%; margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             color: #ffffff;
         }
 
-        /* Background image */
+        /* Background image with blur + dark overlay */
         body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("slide 4.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+            content: ""; position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: url("slide 4.png") no-repeat center/cover;
             filter: blur(5px) brightness(0.7);
             transform: scale(1.1);
             z-index: -1;
         }
 
         .container {
-            max-width: 900px;
-            margin: auto;
+            max-width: 900px; margin: auto;
             padding: 60px 30px;
         }
 
@@ -45,56 +34,36 @@
             padding: 40px;
         }
 
-        /* ✅ CENTERED LOGO (ONLY CHANGE) */
+        /* ✅ Centered logo */
         .logo {
-            display: block;
-            margin: 0 auto 20px auto;
+            display: block; margin: 0 auto 20px auto;
             width: 50px;
         }
 
-        h1, h2 {
-            color: #00c3ff;
-        }
-
+        h1, h2 { color: #00c3ff; }
         h1 {
-            text-align: center;
-            font-size: 2.5rem;
+            text-align: center; font-size: 2.5rem;
             margin-bottom: 10px;
         }
-
         h2 {
-            margin-top: 35px;
-            font-size: 1.6rem;
+            margin-top: 35px; font-size: 1.6rem;
         }
 
         p {
-            line-height: 1.7;
-            font-size: 1.05rem;
+            line-height: 1.7; font-size: 1.05rem;
             margin-top: 10px;
         }
 
-        ul {
-            margin-top: 15px;
-            padding-left: 20px;
-        }
+        ul { margin-top: 15px; padding-left: 20px; }
+        li { margin-bottom: 10px; line-height: 1.6; }
 
-        li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .icon {
-            margin-right: 10px;
-        }
+        .icon { margin-right: 10px; }
 
         .next-lesson {
-            text-align: center;
-            margin-top: 45px;
+            text-align: center; margin-top: 45px;
         }
-
         .next-lesson a {
-            background: #00c3ff;
-            color: #000;
+            background: #00c3ff; color: #000;
             text-decoration: none;
             padding: 16px 36px;
             font-size: 1.15rem;
@@ -103,7 +72,6 @@
             transition: background 0.3s ease, transform 0.3s ease;
             display: inline-block;
         }
-
         .next-lesson a:hover {
             background: #5ad9ff;
             transform: scale(1.05);
@@ -112,26 +80,20 @@
 </head>
 
 <body>
-
 <div class="container">
     <div class="content-box">
 
-        <!-- ✅ CENTERED LOGO -->
+        <!-- ✅ Centered Logo -->
         <img src="logo.jpeg" class="logo" alt="Organization Logo">
 
-        <h1>
-            <i class="fa-solid fa-tower-broadcast icon"></i>
-            DDoS &amp; Email Flooding Attacks
-        </h1>
-
+        <!-- Page Title -->
+        <h1><i class="fa-solid fa-tower-broadcast icon"></i> DDoS &amp; Email Flooding Attacks</h1>
         <p style="text-align: center; opacity: 0.9;">
             Understanding how availability‑based attacks disrupt systems and communication
         </p>
 
-        <h2>
-            <i class="fa-solid fa-wifi icon"></i>
-            Distributed Denial‑of‑Service (DDoS)
-        </h2>
+        <!-- Section: DDoS -->
+        <h2><i class="fa-solid fa-wifi icon"></i> Distributed Denial‑of‑Service (DDoS)</h2>
         <p>
             A distributed denial‑of‑service (DDoS) attack aims to make a service unavailable
             by overwhelming it with traffic from many sources simultaneously. Botnets are
@@ -144,10 +106,8 @@
             <li>Attacks can be repeated, timed, or sustained</li>
         </ul>
 
-        <h2>
-            <i class="fa-solid fa-envelope-open-text icon"></i>
-            Email Flooding Attacks
-        </h2>
+        <!-- Section: Email Flooding -->
+        <h2><i class="fa-solid fa-envelope-open-text icon"></i> Email Flooding Attacks</h2>
         <p>
             Email flooding is a form of availability attack targeting inboxes rather than
             web services. Attackers generate massive volumes of email to prevent victims
@@ -159,43 +119,35 @@
             <li>Often combined with harassment or pressure campaigns</li>
         </ul>
 
-        <h2>
-            <i class="fa-solid fa-robot icon"></i>
-            Role of Automation
-        </h2>
+        <!-- Section: Automation -->
+        <h2><i class="fa-solid fa-robot icon"></i> Role of Automation</h2>
         <p>
             Automation allows attackers to conduct both DDoS and email flooding at scale.
             Once attack systems are configured, they can operate continuously with minimal
             human interaction, greatly increasing impact.
         </p>
 
-        <h2>
-            <i class="fa-solid fa-triangle-exclamation icon"></i>
-            Impact of These Attacks
-        </h2>
+        <!-- Section: Impact -->
+        <h2><i class="fa-solid fa-triangle-exclamation icon"></i> Impact of These Attacks</h2>
         <p>
             Availability attacks affect more than systems. They can disrupt businesses,
             research, emergency communication, and personal safety, making them a serious
             cybersecurity concern even without data theft.
         </p>
 
-        <h2>
-            <i class="fa-solid fa-shield-halved icon"></i>
-            Defensive Awareness
-        </h2>
+        <!-- Section: Defense -->
+        <h2><i class="fa-solid fa-shield-halved icon"></i> Defensive Awareness</h2>
         <p>
             Understanding how these attacks work helps defenders prepare mitigations,
             recognize attack patterns early, and reduce operational and human impact.
         </p>
 
+        <!-- Next Lesson Button -->
         <div class="next-lesson">
-            <a href="lesson4o2.html">
-                <i class="fa-solid fa-arrow-right"></i> Next Lesson
-            </a>
+            <a href="lesson4o2.html"><i class="fa-solid fa-arrow-right"></i> Next Lesson</a>
         </div>
 
     </div>
 </div>
-
 </body>
 </html>
