@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Cyber Shield</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body {
     height: 100%;
@@ -135,6 +136,29 @@ header p {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 10px black;
+}
+		@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    font-size: 14px;
+  }
+  table th, table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+  button {
+    width: 100%; /* ✅ buttons stretch full width on mobile */
+    margin-top: 10px;
+  }
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    word-wrap: break-word;
 }
 </style>
 </head>
