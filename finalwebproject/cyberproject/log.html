@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>Cyber Shield | Access</title>
-
   <style>
     /* Reset & base styles */
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,7 +16,6 @@
       align-items: center;
       color: white;
     }
-
     /* Card container */
     .card {
       width: 380px;
@@ -29,7 +28,6 @@
       position: relative;
       animation: fadeUp 0.8s ease;
     }
-
     /* Logo styling */
     .logo {
       width: 90px; height: 90px;
@@ -42,11 +40,9 @@
       border-radius: 50%;
       box-shadow: 0 10px 30px rgba(125,71,255,0.7);
     }
-
     /* Headings & subtitles */
     h2 { margin-top: 45px; margin-bottom: 8px; }
     .subtitle { font-size: 13px; opacity: 0.75; margin-bottom: 25px; }
-
     /* Inputs, buttons, selects */
     input, button, select {
       width: 100%; padding: 14px; margin-bottom: 12px;
@@ -65,12 +61,34 @@
     .link { font-size: 14px; color: #a78bff; cursor: pointer; margin-top: 8px; }
     .message { margin-top: 10px; color: #ff6b6b; min-height: 18px; }
     .hidden { display: none; }
-
     /* Animations */
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } 
+    }
     /* Welcome text */
     #welcome-text { font-size: 20px; font-weight: bold; color: #a78bff; }
+    		@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    font-size: 14px;
+  }
+  table th, table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+  button {
+    width: 100%; /* ✅ buttons stretch full width on mobile */
+    margin-top: 10px;
+  }
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    word-wrap: break-word;
+}
   </style>
 </head>
 
