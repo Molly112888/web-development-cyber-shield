@@ -27,6 +27,29 @@ body::before {
     border-radius: 16px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.35);
 }
+ 		@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    font-size: 14px;
+  }
+  table th, table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+  button {
+    width: 100%; /* ✅ buttons stretch full width on mobile */
+    margin-top: 10px;
+  }
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    word-wrap: break-word;
+}   
 
 /* Headings */
 h1, h2 { color: #2563eb; }
