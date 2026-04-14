@@ -36,5 +36,13 @@ Cybersecurity communities and resources that provided inspiration.
 API providers that enabled real-time news integration.
 Open-source tools and frameworks that made development possible.
 
-
+Group members 
+Katlego  Setati     202600625
+Kentina  Mashala    202601854
+Zintle   Jozi       202464386
+Sphosethu Mtengana  202601214
+Bohlale Marutha     202429679
+Nokuphiwa Khawula   202624336
+Isiphile Nonyongo   202600703
+Sekgololo Mogale    202600570
 
